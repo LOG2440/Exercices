@@ -12,4 +12,5 @@ La documentation de [HTML sur MDN](https://developer.mozilla.org/en-US/docs/Web/
 
 Voici les liens vers les différents exercices et leurs énoncés :
 
+- [`Syntaxe`](./Syntaxe/README.MD) : exercice sur la syntaxe du langage HTML
 - [`Form`](./Form/README.MD) : exercice sur la création de formulaires HTML
