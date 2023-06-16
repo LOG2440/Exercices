@@ -1,0 +1,41 @@
+a {
+    text-decoration: none;
+}
+
+.square-img {
+    width: 125px;
+    height: 125px;
+}
+
+#logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* Pour la page de chaque navigateur */
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+header img {
+    position : absolute;
+    right: 0;
+}
+
+#information {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 5px;
+    text-indent: 1em;
+    text-align: justify;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+}

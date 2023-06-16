@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syntaxe HTML</title>
+</head>
+
+<body>
+  <div>
+    <h1 id="main-title" class="bold">Syntaxe HTML</h1>
+    <section id="description" class="description text">
+      <p>Le code de cette page comporte plusieurs erreurs de syntaxe HTML. </p>
+      <p>Pouvez vous en trouver 5 ?</p>
+    </section>
+
+    <h3 id="title"> Erreurs dans le code : </h3>
+
+    <ul>
+      <li>Erreur #1 : la valeur de l'attribut <code>id</code> ne peut pas être une liste :
+        <code>id="title main-title". </code>
+      </li>
+      <li>Erreur #2 : la balise &lt;text&gt; n'est pas un élément HTML valide. Il faut utiliser &lt;p&gt; ou simplement
+        laisser le texte. </li>
+      <li>Erreur #3 : la valeur de l'attribut <code>id</code> est unique les éléments &lt;h1&gt; et &lt;h3&gt; ne
+        peuvent pas avoir le même <code>id</code>.</li>
+      <li>Erreur #4 : l'élément &lt;li&gt;(<em>List Element</em>) doit être enfant d'un élément &lt;ul&gt;
+        (<em>Unordered List</em>) ou &lt;ol&gt; (<em>Ordered List</em>). </li>
+      <li>Erreur #5 : l'élément &lt;div&gt; doit avoir une balise fermante &lt;/div&gt;. Ceci génère un 2e élément
+        &lt;div&gt; vide dans la page.</li>
+    </ul>
+
+    <p>Note : dans la ligne suivante : <code>&lt;section id="description" class="description text"&gt;</code> la valeur
+      "description" est toute à fait valide pour les attributs <code>id</code> et <code>class</code> en même temps.</p>
+  </div>
+</body>
+
+</html>
