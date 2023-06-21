@@ -13,3 +13,4 @@ La documentation de [CSS sur MDN](https://developer.mozilla.org/en-US/docs/Web/C
 Voici les liens vers les différents exercices et leurs énoncés. Vous êtes conseillés de comencer par l'exercice d'introduction :
 
 - [`Syntaxe`](./Syntaxe/README.MD) : exercice d'introduction sur la syntaxe du langage CSS
+- [`Box`](./Box/README.MD) : exercice sur les boîtes flexibles et les grilles CSS

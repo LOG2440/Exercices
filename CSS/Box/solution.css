@@ -1,0 +1,102 @@
+:root {
+    --base-color: #575656;
+    --text-color: #ffffff;
+    --background-color: #181818;
+    --border-color: #1bac08;
+    --highlight-color: #a8a8a8;
+    --employee-color: #ffa500;
+    --intern-color: lightgreen;
+    --gap-size: 1em;
+}
+
+body {
+    color: var(--text-color);
+    font-size: large;
+    background-color: var(--background-color);
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-size);
+}
+
+#top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    padding: 5px;
+}
+
+#top-bar-title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 15px;
+}
+
+#main-area {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(500px, 1fr));
+    /* Exercice #2 : Permet de créer autant de colonnes que possible avec une taille minimale de 450xp pour les enfants */
+    /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
+    gap: var(--gap-size);
+}
+
+.employee-card {
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    display: flex;
+    background-color: var(--base-color);
+    position: relative;
+}
+
+.employee-card:hover {
+    background-color: var(--highlight-color);
+}
+
+.employee-card:hover button {
+    visibility: visible;
+}
+
+.info-button {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.employee-info {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.employee-card>img {
+    width: 200px;
+    height: 200px;
+}
+
+.position {
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    background-color: var(--employee-color);
+    box-sizing: border-box;
+}
+
+.intern {
+    background-color: var(--intern-color);
+}
+
+.bold {
+    font-weight: bold;
+}
