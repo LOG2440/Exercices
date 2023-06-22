@@ -1,0 +1,163 @@
+#container {
+    display: grid;
+    margin: 0 auto;
+    max-width: 75%;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+    grid-template-areas:
+        "top-bar top-bar"
+        "main-content aside";
+}
+
+#top-bar {
+    display: flex;
+    flex-direction: row;
+    flex: 0 1;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    grid-area: top-bar;
+}
+
+#page-nav {
+    grid-area: aside;
+    position: sticky;
+    align-self: start;
+    top: 0;
+}
+
+#search-bar {
+    flex-grow: 0.25;
+    display: flex;
+}
+
+#search-bar input {
+    flex-grow: 1;
+}
+
+#search-bar * {
+    border-radius: 15px;
+}
+
+
+.notecard {
+    background-color: rgba(0, 133, 242, .1);
+    border: 1px solid rgba(0 133 242, .1);
+    border-left: 4px solid #0085f2 !important;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    position: relative;
+}
+
+code {
+    background-color: #f2f1f1;
+    padding: 0.25rem;
+}
+
+main {
+    grid-area: main-content;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table td,
+table th {
+    border: 1px solid #cdcdcd;
+    padding: 0.5rem 0.75rem;
+    vertical-align: middle;
+}
+
+
+#page-nav ul {
+    list-style: none;
+    border-left: 1px solid black;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+li a {
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:800px) {
+    #container {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "top-bar"
+            "aside"
+            "main-content";
+    }
+
+    #page-nav {
+        grid-area: aside;
+        position: relative;
+    }
+
+    #page-nav,
+    #page-nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        border-left: none;
+    }
+
+
+}
+
+/* Changer la couleur des notes en vert */
+@media all and (min-width:450px) and (max-width:800px) {
+    .notecard {
+        background-color: #15ec15;
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    #search-bar,
+    #page-nav {
+        display: none;
+    }
+
+    figure {
+        margin: 0px;
+    }
+}
+
+@media print {
+
+    #top-bar,
+    #page-nav {
+        display: none;
+    }
+
+    #container {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "main-content";
+    }
+
+    #types_de_media,
+    #caracteristiques_media_media_features {
+        break-before: page;
+    }
+
+    /* Problème de spécificifité :
+        Pour .notecard, l'attribut border est marqué comme !important et la règle ici ne s'applique plus, même si placée après. 
+        Il faudrait retirer !important à la ligne 46
+        Pour td et th, les sélecteurs aux lignes 65,66 ont une spécificité plus grande et s'appliquent toujours. 
+        Il faudrait changer les sélecteurs suivants pour table td, table th
+    */
+    .notecard,
+    td,
+    th {
+        border-color: none;
+        border: none;
+    }
+}

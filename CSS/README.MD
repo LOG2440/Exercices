@@ -14,3 +14,4 @@ Voici les liens vers les différents exercices et leurs énoncés. Vous êtes co
 
 - [`Syntaxe`](./Syntaxe/README.MD) : exercice d'introduction sur la syntaxe du langage CSS
 - [`Box`](./Box/README.MD) : exercice sur les boîtes flexibles et les grilles CSS
+- [`Query`](./Query/README.MD) : exercice sur les requêtes média
