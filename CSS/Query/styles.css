@@ -1,0 +1,95 @@
+#container {
+    display: grid;
+    margin: 0 auto;
+    max-width: 75%;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+    grid-template-areas:
+        "top-bar top-bar"
+        "main-content aside";
+}
+
+#top-bar {
+    display: flex;
+    flex-direction: row;
+    flex: 0 1;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    grid-area: top-bar;
+}
+
+#page-nav {
+    grid-area: aside;
+    position: sticky;
+    align-self: start;
+    top: 0;
+}
+
+#search-bar {
+    flex-grow: 0.25;
+    display: flex;
+}
+
+#search-bar input {
+    flex-grow: 1;
+}
+
+#search-bar * {
+    border-radius: 15px;
+}
+
+
+.notecard {
+    background-color: rgba(0, 133, 242, .1);
+    border: 1px solid rgba(0 133 242, .1);
+    border-left: 4px solid #0085f2 !important;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    position: relative;
+}
+
+code {
+    background-color: #f2f1f1;
+    padding: 0.25rem;
+}
+
+main {
+    grid-area: main-content;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table td,
+table th {
+    border: 1px solid #cdcdcd;
+    padding: 0.5rem 0.75rem;
+    vertical-align: middle;
+}
+
+
+#page-nav ul {
+    list-style: none;
+    border-left: 1px solid black;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+li a {
+    text-decoration: none;
+}
+
+
+@media print {
+
+    .notecard,
+    td,
+    th {
+        border-color: none;
+        border: none;
+    }
+}

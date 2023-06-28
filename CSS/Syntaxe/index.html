@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Syntaxe CSS</title>
+</head>
+
+<body>
+  <header>
+    <h1 id="main-title">Syntaxe CSS</h1>
+  </header>
+  <main>
+    <div id="form-container">
+      <h3 id="form-title">Exercice #1 : Formulaire de connexion</h3>
+      <form class="rounded-border">
+        <div>
+          <label for="login-name">Nom d'utilisateur :</label>
+          <input type="text" id="login-name" class="rounded-border">
+        </div>
+        <div>
+          <label for="login-pass">Mot de passe :</label>
+          <input type="password" id="login-pass" class="rounded-border">
+        </div>
+        <div>
+          <label for="login-mode">Mode : </label>
+          <select id="login-mode">
+            <option value="1" selected>Automatique</option>
+            <option value="2">Bureau</option>
+            <option value="3">Mobile</option>
+          </select>
+        </div>
+        <input type="submit" id="login-submit" class="rounded-border" value="Connexion">
+        <p id="logoff-reminder">N'oubliez pas de fermer votre session à la fin de l'utilisation.</p>
+      </form>
+    </div>
+
+    <div id="selector-list">
+      <h3>Exercice #2 : Sélecteurs CSS</h3>
+      <p>
+        Trouvez 4 sélecteurs différents pour l'élément &lt;input&gt; de la ligne 35 avec les contraintes suivantes :
+      </p>
+      <ul>
+        <li>En utilisant un sélecteur par attribut : </li>
+        <li>En utilisant des sélecteurs hiérarchiques : </li>
+        <li>En utilisant un sélecteur de voisins : </li>
+        <li>En utilisant la pseudo classe <code>:not()</code> </li>
+      </ul>
+    </div>
+
+    <div id="list-items">
+      <h3>Exercice #3 : Modification d'un marqueur</h3>
+    </div>
+  </main>
+</body>
+
+</html>

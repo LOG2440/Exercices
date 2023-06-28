@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Requêtes média</title>
+</head>
+
+<body>
+  <div id="container">
+    <header id="top-bar">
+      <a href="https://developer.mozilla.org/fr/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/MDN_Web_Docs_logo.svg" width="75px"
+          height="75px"></a>
+      <form id="search-bar" action="#">
+        <input type="text">
+        <button type="submit">
+          Recherche
+        </button>
+      </form>
+    </header>
+    <main id="main-content">
+      <h1> Media queries </h1>
+      <div class="section-content">
+        <p><strong>Les requêtes média (<em>media queries</em>)</strong> permettent de modifier l'apparence d'un site ou
+          d'une application en fonction du type d'appareil (impression ou écran par exemple) et de ses caractéristiques
+          (la résolution d'écran ou la largeur de la zone d'affichage (<em>viewport</em>) par exemple).</p>
+        <p>Les requêtes média sont utilisées afin :</p>
+        <ul>
+          <li>D'appliquer certains styles de façon conditionnelle avec le <a href="/fr/docs/Web/CSS">CSS</a> grâce <a
+              href="/fr/docs/Web/CSS/At-rule">aux règles @</a> <a href="/fr/docs/Web/CSS/@media"><code>@media</code></a>
+            et <a href="/fr/docs/Web/CSS/@import"><code>@import</code></a>.</li>
+          <li>De cibler certains médias pour les éléments <a
+              href="/fr/docs/Web/HTML/Element/style"><code>&lt;style&gt;</code></a>, <a
+              href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a>, <a
+              href="/fr/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code></a> et d'autres éléments <a
+              href="/fr/docs/Web/HTML">HTML</a> grâce à l'attribut <code>media=</code>.</li>
+          <li>De <a href="/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries">tester et surveiller l'état d'un
+              média</a> grâce aux méthodes <a
+              href="/fr/docs/Web/API/Window/matchMedia"><code>Window.matchMedia()</code></a> et <a
+              href="/en-US/docs/Web/API/MediaQueryList/addListener" class="only-in-en-us"
+              title="Currently only available in English (US)"><code>MediaQueryList.addListener()</code>
+              <small>(en-US)<small></small></small></a>.</li>
+        </ul>
+        <div class="notecard note" id="sect1">
+          <p><strong>Note :</strong> Les exemples de cet article utilisent <code>@media</code> à des fins
+            d'illustration.
+            Toutefois, la syntaxe est la même pour les différents types de requêtes média.</p>
+        </div>
+      </div>
+      <section>
+        <h3 id="syntaxe"><a href="#syntaxe">Syntaxe</a></h3>
+        <div class="section-content">
+          <p>Une requête média se compose d'un <em>type de média</em> optionnel et d'une ou plusieurs expressions de
+            <em>caractéristiques de média</em>. Plusieurs requêtes peuvent être combinées entre elles grâce à des
+            opérateurs logiques. Les requêtes média ne sont pas sensibles à la casse.
+          </p>
+          <p>Une requête média vaut <code>true</code> si le type de média correspond à l'appareil utilisé pour
+            l'affichage du document et si toutes les expressions relatives aux caractéristiques sont vraies. Les
+            requêtes qui utilisent des types de média inconnus valent toujours <code>false</code>.</p>
+          <div class="notecard note" id="sect2">
+            <p><strong>Note :</strong> Lorsqu'une feuille de style est attachée à un élément <a
+                href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> comportant une requếte média, cette
+              feuille de style <a href="http://scottjehl.github.com/CSS-Download-Tests/" class="external"
+                target="_blank">sera toujours téléchargée</a>, même si la requête renvoie <code>false</code>. Toutefois,
+              le contenu de cette feuille n'est pas appliquée tant que le résultat de la requête ne devient pas
+              <code>true</code>.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3 id="types_de_media"><a href="#types_de_media">Types de média</a></h3>
+        <div class="section-content">
+          <p>Un type de média définit une catégorie générale d'appareil. Le type de média est optionnel dans une requête
+            média, sauf si celle-ci utilise les opérateurs logiques <code>not</code> ou <code>only</code>. Par défaut,
+            le type de média utilisé est <code>all</code>.</p>
+          <dl>
+            <dt id="all"><code>all</code></dt>
+            <dd>
+              <p>Correspond pour tous les appareils.</p>
+            </dd>
+            <dt id="print"><code>print</code></dt>
+            <dd>
+              <p>Correspond aux matériaux paginés et aux documents consultés en aperçu avant impression. Pour plus
+                d'informations, voir l'article sur <a href="/fr/docs/Web/CSS/Paged_Media">les médias paginés</a>.</p>
+            </dd>
+            <dt id="screen"><code>screen</code></dt>
+            <dd>
+              <p>Correspond aux appareils dotés d'un écran.</p>
+            </dd>
+            <dt id="speech"><code>speech</code></dt>
+            <dd>
+              <p>Correspond aux outils de synthèse vocale.</p>
+            </dd>
+          </dl>
+          <div class="notecard note" id="sect3">
+            <p><strong>Note :</strong> Les types de média dépréciés CSS2.1 et <a
+                href="https://drafts.csswg.org/mediaqueries-3/#background" class="external" target="_blank">Media
+                Queries 3</a> ont défini plusieurs types additionnels (<code>tty</code>, <code>tv</code>,
+              <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code>, and
+              <code>aural</code>) qui ont ensuite été dépréciés avec <a
+                href="https://dev.w3.org/csswg/mediaqueries/#media-types" class="external" target="_blank">Media Queries
+                4</a>. Ces types ne doivent donc plus être utilisés. Le type <code>aural</code> a été remplacé par le
+              type <code>speech</code>.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3 id="caracteristiques_media_media_features"><a href="#caracteristiques_media_media_features">Caractéristiques
+            média (<i lang="en">media features</i>)</a></h3>
+        <div class="section-content">
+          <p>Les caractéristiques média décrivent certaines caractéristiques spécifiques de l'agent utilisateur, de
+            l'appareil d'affichage ou de l'environnement. Les expressions de caractéristique média testent leur présence
+            ou leur valeur. Chaque expression de caractéristique doit être entourée de parenthèses.</p>
+          <figure class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nom</th>
+                  <th>Résumé</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/width"><code>width</code></a></td>
+                  <td>La largeur de la zone d'affichage (<em>viewport</em>)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/height"><code>height</code></a></td>
+                  <td>La hauteur de la zone d'affichage</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/aspect-ratio"><code>aspect-ratio</code></a></td>
+                  <td>Le rapport largeur/hauteur de la zone d'affichage</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/orientation"><code>orientation</code></a></td>
+                  <td>L'orientation la zone d'affichage</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/resolution"><code>resolution</code></a></td>
+                  <td>La densité de pixel pour l'appareil d'affichage</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><a class="page-not-created"
+                      title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant&nbsp;!"><code>scan</code></a>
+                  </td>
+                  <td>Le processus de scan de l'appareil d'affichage</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/grid"><code>grid</code></a></td>
+                  <td>Le type d'écran de l'appareil : matriciel ou grille ?</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/update-frequency"><code>update</code></a></td>
+                  <td>La fréquence de modification du contenu par l'appareil d'affichage</td>
+                  <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/overflow-block"><code>overflow-block</code></a></td>
+                  <td>La façon dont l'appareil d'affichage gère le contenu qui dépasse de la zone d'affichage selon
+                    l'axe de bloc</td>
+                  <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/overflow-inline"><code>overflow-inline</code></a></td>
+                  <td>La possibilité de faire défiler (<em>scroll</em>) le contenu qui dépasse de la zone d'affichage
+                    sur l'axe en ligne</td>
+                  <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/color"><code>color</code></a></td>
+                  <td>Le nombre de bits pour chaque composante de couleur pour l'appareil d'affichage (ou 0 si
+                    l'appareil ne gère pas les couleurs)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/color-gamut"><code>color-gamut</code></a></td>
+                  <td>Un intervalle approximatif des couleurs prises en charge par l'agent utilisateur et l'appareil
+                    d'affichage</td>
+                  <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/color-index"><code>color-index</code></a></td>
+                  <td>Le nombre d'éléments dans le tableau des couleurs de l'appareil d'affichage (ou 0 si l'appareil ne
+                    dispose pas d'un tel tableau)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/display-mode"><code>display-mode</code></a></td>
+                  <td>Le mode d'affichage de l'application, tel qu'indiqué par la propriété <a
+                      href="/fr/docs/Web/Manifest#display"><code>display</code></a> du manifeste</td>
+                  <td>Définie dans <a href="https://w3c.github.io/manifest/#the-display-mode-media-feature"
+                      class="external" target="_blank">la spécification pour les manifestes des applications web</a>.
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/monochrome"><code>monochrome</code></a></td>
+                  <td>Le nombre de bits par pixel pour le <em>frame buffer</em> monochrome de l'appareil d'affichage ou
+                    0 si l'appareil n'est pas monochrome</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/inverted-colors"><code>inverted-colors</code></a></td>
+                  <td>L'inversion (ou non) des couleurs par l'agent utilisateur ou le système d'exploitation</td>
+                  <td>Reportée au niveau 5 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/pointer"><code>pointer</code></a></td>
+                  <td>La présence d'un appareil de pointage comme mécanisme de saisie principal et sa précision</td>
+                  <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/hover"><code>hover</code></a></td>
+                  <td>La capacité du mécanisme de saisie principal à survoler les éléments</td>
+                  <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/any-pointer"><code>any-pointer</code></a></td>
+                  <td>La présence d'un appareil de pointage parmi les mécanismes de saisie et sa précision</td>
+                  <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/any-hover"><code>any-hover</code></a></td>
+                  <td>La capacité d'un des mécanismes de saisie à survoler les éléments</td>
+                  <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a class="page-not-created"
+                      title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant&nbsp;!"><code>light-level</code></a>
+                  </td>
+                  <td>Le niveau de luminosité de l'environnement</td>
+                  <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/prefers-reduced-motion"><code>prefers-reduced-motion</code></a>
+                  </td>
+                  <td>L'utilisateur préfère que la quantité de mouvement sur la page soit réduite.</td>
+                  <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a class="only-in-en-us" title="Currently only available in English (US)"
+                      href="/en-US/docs/Web/CSS/@media/prefers-reduced-transparency"><code>prefers-reduced-transparency</code>
+                      <small>(en-US)</small></a></td>
+                  <td>L'utilisateur préfère que la transparence utilisée sur la page soit réduite.</td>
+                  <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/prefers-contrast"><code>prefers-contrast</code></a></td>
+                  <td>L'utilisateur préfère que le contraste soit augmenté ou réduit entre des couleurs proches.</td>
+                  <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/prefers-color-scheme"><code>prefers-color-scheme</code></a></td>
+                  <td>L'utilisateur préfère utiliser un thème clair ou un thème sombre.</td>
+                  <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/forced-colors"><code>forced-colors</code></a></td>
+                  <td>Détecte si l'agent utilisateur restreint la palette de couleurs.</td>
+                  <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/scripting"><code>scripting</code></a></td>
+                  <td>La disponibilité des fonctions de script (JavaScript par exemple)</td>
+                  <td>Reportée au niveau 5 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/device-width"><code>device-width</code></a> <abbr
+                      class="icon icon-deprecated" title="Deprecated. Not for use in new websites.">
+                      <span class="visually-hidden">Obsolète</span>
+                    </abbr></td>
+                  <td>La largeur de la surface de rendu pour l'appareil d'affichage</td>
+                  <td>Dépréciée par le niveau 4 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/device-height"><code>device-height</code></a> <abbr
+                      class="icon icon-deprecated" title="Deprecated. Not for use in new websites.">
+                      <span class="visually-hidden">Obsolète</span>
+                    </abbr></td>
+                  <td>La hauteur de la surface de rendu pour l'appareil d'affichage</td>
+                  <td>Dépréciée par le niveau 4 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+                <tr>
+                  <td><a href="/fr/docs/Web/CSS/@media/device-aspect-ratio"><code>device-aspect-ratio</code></a> <abbr
+                      class="icon icon-deprecated" title="Deprecated. Not for use in new websites.">
+                      <span class="visually-hidden">Obsolète</span>
+                    </abbr></td>
+                  <td>Le rapport largeur/hauteur de la surface de rendu pour l'appareil d'affichage</td>
+                  <td>Dépréciée par le niveau 4 du module de spécification <em>Media Queries</em>.</td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <aside id="page-nav">
+      <h2>Dans cet article</h2>
+      <ul>
+        <li><a href="#syntaxe">Syntaxe</a></li>
+        <li><a href="#types_de_media">Cibler des types de média</a></li>
+        <li><a href="#caracteristiques_media_media_features">Cibler des caractéristiques média</a></li>
+      </ul>
+    </aside>
+  </div>
+</body>
+
+</html>

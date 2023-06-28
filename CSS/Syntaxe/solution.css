@@ -1,0 +1,90 @@
+/* Mise en page du formulaire*/
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+input {
+    width: 100%;
+    margin: 5px 0px;
+    box-sizing: border-box;
+}
+
+select {
+    width: 100%;
+}
+
+div>input {
+    background-color: #ffffe0;
+}
+
+/* Alternative
+input[type=text],[type=password]{
+    background-color: #ffffe0;
+} 
+*/
+
+.rounded-border {
+    border-radius: 10px;
+}
+
+#login-submit {
+    background-color: darkgreen;
+    color: white;
+    font-size: large;
+}
+
+#login-submit:hover {
+    font-size: larger;
+    background-color: yellowgreen;
+}
+
+#logoff-reminder {
+    text-align: center;
+}
+
+/* Sélecteurs multiples pour l'élément <input> */
+
+li:after {
+    font-family: monospace;
+    font-weight: bold;
+}
+
+li:nth-child(1)::after {
+    content: 'input[type=\'submit\']';
+}
+
+li:nth-child(2)::after {
+    content: 'form>input';
+}
+
+li:nth-child(3)::after {
+    content: 'div+input ou div~input';
+}
+
+li:nth-child(4)::after {
+    content: 'input:not(div>input) ou input:not(:last-child)';
+}
+
+/* Pour tester */
+.a_remplacer {
+    background-color: blue;
+}
+
+/* Exercice supplémentaire */
+
+li:hover::marker {
+    content: "★ ";
+    color: green;
+    font-size: 20px;
+}

@@ -1,0 +1,27 @@
+/* Mise en page du formulaire*/
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    padding: 10px;
+}
+
+input {
+    box-sizing: border-box;
+}
+
+/* Sélecteurs multiples pour l'élément <input> */
+
+/* Pour tester */
+.a_remplacer {
+    background-color: blue;
+}
+
+/* Exercice supplémentaire */
