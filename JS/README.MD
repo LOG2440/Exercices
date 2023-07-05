@@ -13,3 +13,4 @@ La documentation de [JS sur MDN](https://developer.mozilla.org/en-US/docs/Web/Ja
 Voici les liens vers les différents exercices et leurs énoncés. Vous êtes conseillés de comencer par l'exercice d'introduction :
 
 - [`Functions`](./Functions/README.MD) : exercices sur les fonctions, portée et fermetures en JavaScript
+- [`Objects`](./Objects/README.MD) : exercices sur les objets en JavaScript
