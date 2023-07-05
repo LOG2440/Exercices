@@ -14,3 +14,4 @@ Voici les liens vers les différents exercices et leurs énoncés. Vous êtes co
 
 - [`Functions`](./Functions/README.MD) : exercices sur les fonctions, portée et fermetures en JavaScript
 - [`Objects`](./Objects/README.MD) : exercices sur les objets en JavaScript
+- [`Arrays`](./Arrays/README.MD) : exercices sur les tableaux et les méthodes d'itération en JavaScript
