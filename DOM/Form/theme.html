@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/shared.css">
+  <link rel="stylesheet" href="./css/theme.css">
+  <script src="./js/theme/theme.js" type="module"></script>
+  <title>Configuration du thème visuel</title>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="./index.html">Évaluation du produit</a></li>
+      <li><a href="./theme.html"></ahref>Configuration du thème visuel</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h3>Choix des couleurs du thème:</h3>
+    <section id="parent">
+      <div id="color-picker-container">
+        <label>Couleur du texte: <input type="color" id="picker-text"></label>
+        <label>Couleur des bordures: <input type="color" id="picker-border"></label>
+        <label>Couleur du fond: <input type="color" id="picker-background"></label>
+      </div>
+      <div id="preview">
+        <div id="preview-box">
+          <p id="preview-text">
+            Ceci est un texte de prévisualisation du thème
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="buttons">
+      <button id="save-button">Sauvegarder</button>
+      <button id="reset-button">Remettre à l'état initial</button>
+    </section>
+  </main>
+</body>
+
+</html>

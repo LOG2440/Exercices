@@ -1,0 +1,16 @@
+:root {
+    --text-color: #222223;
+    --border-color: #222223;
+    --background-color: #add8e6;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}

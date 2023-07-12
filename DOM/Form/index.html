@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/shared.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/form/form_saver.js" type="module"></script>
+  <title>Formulaire avec rappel</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Évaluation du produit</a></li>
+        <li><a href="./theme.html"></ahref>Configuration du thème visuel</a></li>
+      </ul>
+    </nav>
+    <h1>Évaluez le produit</h1>
+  </header>
+  <main>
+    <form id="form">
+      <div id="eval">
+        <div id="recommend">
+          <section>
+            <h3> Recommanderez-vous ce produit à d'autres clients ?</h3>
+            <label for="yes">Oui</label>
+            <input type="radio" name="recommend" value="Oui" id="yes">
+            <label for="no">Non</label>
+            <input type="radio" name="recommend" value="Non" id="no">
+          </section>
+        </div>
+        <div id="rating">
+          <h3>Donnez une note entre 1 et 5 :</h3>
+          <select id="rating-select" required>
+            <option value="" selected disabled hidden>Choisir</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+      <div id="comment">
+        <h3>Ajoutez un commentaire!</h3>
+        <label for="title">Titre:</label>
+        <input type="text" id="title" name="title" required placeholder="Que faut-il savoir sur le produit ?">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required minlength="10"></textarea>
+      </div>
+      <input type="submit" value="Envoyer">
+    </form>
+  </main>
+</body>
+
+</html>
