@@ -1,0 +1,103 @@
+:root {
+    --main-color: #2dc568;
+    --background-color: #ffffff;
+    --player-color: #800080;
+    --active-color: #006400;
+    --text-color: #000000;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+#container {
+    overflow: hidden;
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto 0;
+    justify-content: space-around;
+}
+
+#playlist {
+    padding: 0 10px;
+    gap: 10px;
+}
+
+#playlist h1 {
+    text-align: center;
+}
+
+.song-item {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    margin-bottom: 2px;
+    text-decoration: none;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+}
+
+
+.song-item>p {
+    flex: 0.25;
+}
+
+.song-item:hover {
+    border: 2px solid var(--active-color);
+    cursor: pointer;
+}
+
+.song-item button {
+    border: none;
+}
+
+#controls {
+    align-items: center;
+    flex: 0.8;
+}
+
+#timeline-container {
+    justify-content: space-between;
+    width: 100%;
+}
+
+#timeline {
+    accent-color: var(--player-color);
+    flex: 1
+}
+
+#now-playing {
+    text-align: center;
+    margin: 5px;
+}
+
+#buttons-container {
+    gap: 3px;
+}
+
+.control-btn {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--main-color);
+}
+
+.control-btn:hover {
+    font-size: 35px;
+}
+
+.control-btn-toggled {
+    color: var(--active-color);
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="dom_builder.js" defer></script>
+  <title>DOM Builder</title>
+</head>
+
+<body>
+  <header>
+    <h1>Écoles de génie à Montréal</h1>
+  </header>
+  <main id='root'>
+    <h2>Liste des écoles et facultés de génie à Montréal</h2>
+    <div id="parent-grid">
+      <a id="polymtl" class="school-card" href="https://polymtl.ca/" target="_blank">
+        <img class="logo" src="./assets/logo_poly.jpg">
+        <div class="info-container">
+          <p class="info-name">
+            École Polytechnique de Montréal
+          </p>
+        </div>
+      </a>
+      <a id="pl-2" class="school-card" href="https://www.etsmtl.ca/" target="_blank">
+        <img class="logo" src="./assets/logo_ets.png">
+        <div class="info-container">
+          <p class="info-name">
+            École de Technologie Supérieure
+          </p>
+        </div>
+      </a>
+      <a id="pl-3" class="school-card" href="https://www.mcgill.ca/engineering/" target="_blank">
+        <img class="logo" src="./assets/logo_mcgill.png">
+        <div class="info-container">
+          <p class="info-name">
+            McGill Faculty of Engineering
+          </p>
+        </div>
+      </a>
+      <a id="pl-4" class="school-card" href="https://www.concordia.ca/ginacody.html" target="_blank">
+        <img class="logo" src="./assets/logo_concordia.png">
+        <div class="info-container">
+          <p class="info-name">
+            Gina Cody School of Engineering and Computer Science
+          </p>
+        </div>
+      </a>
+    </div>
+  </main>
+</body>
+
+</html>

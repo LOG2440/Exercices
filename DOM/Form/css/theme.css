@@ -1,0 +1,31 @@
+#color-picker-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 200px;
+    gap: 10px;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+#preview-box {
+    height: 100px;
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    background-color: var(--background-color);
+}
+
+#preview-text {
+    color: var(--text-color);
+}

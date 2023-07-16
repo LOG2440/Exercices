@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="player.js" defer></script>
+  <title>PolyPlay</title>
+</head>
+
+<body>
+  <main id="container" class="flex-column">
+    <section id="playlist" class="flex-column">
+      <h1>Votre playlist préférée</h1>
+      <div id="song-1" class="song-item flex-row" data-url="assets/song1.mp3" data-name="Rock Intro">
+        <span>1</span>
+        <p>Rock Intro</p>
+        <p>Rock</p>
+        <p>DenisDL</p>
+      </div>
+      <div id="song-2" class="song-item flex-row" data-url="assets/song2.mp3" data-name="Aesthetic Boompera">
+        <span>2</span>
+        <p>Aesthetic Boompera</p>
+        <p>LoFi</p>
+        <p>Lidéric</p>
+      </div>
+    </section>
+    <section id="play-bar">
+      <div id="now-playing">On joue : rien</div>
+      <div id="controls" class="flex-column">
+        <section id="buttons-container" class="flex-row">
+          <button class="control-btn fa fa-2x fa-arrow-left" id="previous"></button>
+          <button class="control-btn fa fa-2x fa-play" id="play"></button>
+          <button class="control-btn fa fa-2x fa-arrow-right" id="next"></button>
+        </section>
+        <section id="timeline-container" class="flex-row">
+          <input id="timeline" type="range" max="100" value="0" />
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
