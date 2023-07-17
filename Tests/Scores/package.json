@@ -1,0 +1,26 @@
+{
+  "name": "scores",
+  "version": "1.0.0",
+  "description": "Exercices sur les tests avec JestJS",
+  "type": "module",
+  "keywords": [
+    "Jest",
+    "tests",
+    "validation"
+  ],
+  "scripts": {
+    "start": "node ./src/solution.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose",
+    "coverage": "npm test -- --coverage"
+  },
+  "author": "",
+  "license": "CC-BY-3.0",
+  "devDependencies": {
+    "jest": "^29.6.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/src/scoreCalculator.js"
+    ]
+  }
+}
