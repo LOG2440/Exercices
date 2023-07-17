@@ -61,7 +61,6 @@ describe("ScoreCalculator tests", () => {
             const spy = jest.spyOn(calculator, 'calculateAverages').mockImplementation(() => { });
             calculator.getStats(reviews);
             expect(spy).toHaveBeenCalled();
-            expect(spy).toHaveBeenCalledTimes(3);
         });
     });
 

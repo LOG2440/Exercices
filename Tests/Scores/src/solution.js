@@ -19,10 +19,11 @@ export default class ScoreCalculatorSolution {
             anonymousAverage: []
         }
         );
-        finalGrades.totalAverage = this.calculateAverages(finalGrades.totalAverage);
-        finalGrades.anonymousAverage = this.calculateAverages(finalGrades.anonymousAverage);
-        finalGrades.authoredAverage = this.calculateAverages(finalGrades.authoredAverage);
-        return finalGrades;
+        return {
+            totalAverage: this.calculateAverages(finalGrades.totalAverage),
+            anonymousAverage: this.calculateAverages(finalGrades.anonymousAverage),
+            authoredAverage: this.calculateAverages(finalGrades.authoredAverage)
+        };
     }
 
     validateStars(review) {
