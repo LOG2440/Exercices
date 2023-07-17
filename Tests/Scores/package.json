@@ -9,7 +9,6 @@
     "validation"
   ],
   "scripts": {
-    "start": "node ./src/solution.js",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose",
     "coverage": "npm test -- --coverage"
   },
