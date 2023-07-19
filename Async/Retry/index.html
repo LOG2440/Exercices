@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilisation des promesses</title>
+    <script src="retry.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Tentatives de connexion au serveur</h1>
+        <label>Seuil de réussite (en pourcentage) :
+            <input id="sucess" value="25" type="number" min="1" max="100">
+        </label>
+        <button id="send-server">Contacter le serveur</button>
+        <ul id="parent">
+        </ul>
+    </main>
+</body>
+
+</html>
