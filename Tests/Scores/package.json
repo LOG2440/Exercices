@@ -17,6 +17,9 @@
   "devDependencies": {
     "jest": "^29.6.1"
   },
+  "optionalDependencies": {
+    "win-node-env": "0.4.0"
+  },
   "jest": {
     "collectCoverageFrom": [
       "**/src/scoreCalculator.js"
