@@ -47,7 +47,7 @@ app.use('/books', (req, res, next) => {
     }
     const newLimit = limits.get(token);
 
-    /* Exercice #2 : vérifier la limite en fonction du temps */
+    /* Exercice supplémentaire : vérifier la limite en fonction du temps */
     requestTimeoutHandler(newLimit);
 
     if (newLimit.count - 1 < 0) {

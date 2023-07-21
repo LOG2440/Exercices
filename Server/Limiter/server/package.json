@@ -4,9 +4,9 @@
   "description": "Serveur avec une limite de requêtes",
   "main": "server.js",
   "scripts": {
-    "start": "node solution.js"
+    "start": "node server.js",
+    "solution": "node solution.js"
   },
-  "author": "",
   "license": "CC-BY-3.0",
   "dependencies": {
     "cors": "^2.8.5",
