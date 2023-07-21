@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La série de Discworld</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>La série Discworld est composée des oeuvres écrites par Terry Pratchett</h1>
+        <h1 id="message" style="color: red;"></h1>
+        <div class="field">
+            <span>Obtenir un jeton : </span>
+            <button id="token-btn">Obtenir</button>
+        </div>
+        <div class="field">
+            <span>Réinitialiser la limite: </span>
+            <button id="reset-btn">Réinitialiser</button>
+        </div>
+        <div class="field">
+            <span>Réinitialiser le serveur au complet: </span>
+            <button id="reset-all-btn">Réinitialiser le serveur</button>
+        </div>
+
+        <div id="book-container">
+            <div class="field">
+                <h2>Liste des livres</h2>
+                <label> Nombre maximal de livres à récupérer. Si -1, on récupère tous les livres
+                    <input type="number" min="-1" max="42" value=-1 id="maxCount">
+                </label>
+                <button id="books-btn">Obtenir les livres</button>
+                <ul id="book-parent"></ul>
+            </div>
+            <div class="field">
+                <h2>Livre spécifique</h2>
+                <p>(Les id plus que 42 sont invalides)</p>
+                <label>Information sur un livre spécifique:
+                    <input type="number" min="1" max="50" value="1" id="bookId">
+                </label>
+                <label>Livre aléatoire :
+                    <input type="checkbox" id="random">
+                </label>
+                <button id="specific-book-btn">Obtenir le livre</button>
+                <p class="bold" id="specific-book-parent"></p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

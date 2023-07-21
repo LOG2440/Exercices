@@ -1,0 +1,19 @@
+.field {
+    margin: 10px;
+    border: 1px solid blue;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#book-container {
+    display: flex;
+    width: 100%;
+}
+
+#book-container div {
+    width: 50%;
+    padding: 5px;
+}
