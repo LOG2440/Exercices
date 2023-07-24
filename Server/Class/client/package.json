@@ -1,0 +1,13 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "Site web du gestionnaire de cours",
+  "scripts": {
+    "start": "http-server -o -s"
+  },
+  "author": "Nikolay Radoev",
+  "license": "CC-BY-3.0",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
