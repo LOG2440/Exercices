@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestionnaire de cours</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="fetch.js"></script>
+</head>
+
+<body>
+    <main>
+        <h1>GESTIONNAIRE DE COURS</h1>
+        <div id="class-container"></div>
+        <div class="align">
+            <label>Cours à trouver : <input id="input-find-class"></label>
+            <button id="btn-find-class" onclick="findCourse()">Trouver cours</button>
+            <span id="span-find-result"></span>
+        </div>
+        <div class="align">
+            <label for="btn-add-class">Cours à ajouter : <input id="input-add-class"> </label>
+            <button id="btn-add-class" onclick="addCourse()">Ajouter cours</button>
+            <span id="span-add-result"></span>
+        </div class="align">
+        <section id="class-modification">
+            <div id="class-delete" class="align">
+                <label for="input-delete-class">Cours à supprimer : </label>
+                <input id="input-delete-class" type="text" />
+                <button id="btn-delete-class" onclick="deleteCourse()">Supprimer le cours</button>
+                <span id="span-delete-result"></span>
+            </div>
+            <div id="class-modify" class="align">
+                <label for="input-modify-class">Cours à modifier : </label>
+                <input id="input-modify-class" type="text" />
+                <label for="input-modify-class">Nouveau nombre de crédits : </label>
+                <input id="input-modify-credits" type="number" min="1" max="6" value="3" />
+                <button id="btn-delete-class" onclick="changeCourse()">Modifier le cours</button>
+                <span id="span-modify-result"></span>
+            </div>
+        </section>
+        <div class="align">
+            <button id="btn-delete-all" onclick="deleteAll()">Tout supprimer!</button>
+        </div>
+    </main>
+</body>
+
+</html>
