@@ -7,7 +7,7 @@ class CourseManager {
         this.path = path.join(__dirname + "../../data/courses.json");
     }
 
-    async readCoursesFromFile() {
+    async init() {
         try {
             const courses = await fsPromises.readFile(this.path);
             this.courses = JSON.parse(courses);
@@ -23,6 +23,10 @@ class CourseManager {
 
     async saveCoursesToFile() {
         await fsPromises.writeFile(this.path, JSON.stringify(this.courses, null, 4));
+    }
+
+    async getAllCourses() {
+        return this.courses;
     }
 
     findCourse(sigle) {

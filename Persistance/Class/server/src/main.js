@@ -8,4 +8,4 @@ app.use(cors());
 app.use(express.json());
 app.use("/cours", courseRouter.router);
 
-app.listen(port);
+app.listen(port, () => { console.log(`Serveur disponible sur port ${port}`) });

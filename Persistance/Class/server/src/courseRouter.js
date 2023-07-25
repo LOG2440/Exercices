@@ -1,13 +1,16 @@
 const router = require("express").Router();
 const CourseManager = require('./courseManager');
+// const CourseManager = require('./courseManager.solution');
+
 const courseManager = new CourseManager();
 
 const urlencodedParser = require('express').urlencoded({ extended: false });
 
-courseManager.readCoursesFromFile().then(() => {
+courseManager.init().then(() => {
 
-    router.get("/obtenirCours", (req, res) => {
-        res.status(courseManager.courses.length ? 200 : 404).send(courseManager.courses);
+    router.get("/obtenirCours", async (req, res) => {
+        const courses = await courseManager.getAllCourses();
+        res.status(courses.length ? 200 : 404).send(courses);
     });
 
     router.get("/obtenirCours/:sigle", async (req, res) => {
