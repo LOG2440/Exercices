@@ -1,0 +1,16 @@
+{
+  "name": "database-server",
+  "version": "1.0.0",
+  "description": "Gestionnaire de cours et professeurs avec une base de données",
+  "main": "main.js",
+  "scripts": {
+    "start": "node ./src/main.js"
+  },
+  "author": "Nikolay Radoev",
+  "license": "CC-BY-3.0",
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "4.18.2",
+    "mongodb": "^5.7.0"
+  }
+}
