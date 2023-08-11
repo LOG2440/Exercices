@@ -13,3 +13,4 @@ La documentation de [React](https://react.dev/reference/react) vous sera égalem
 Voici les liens vers les différents exercices et leurs énoncés :
 
 - [`Reducer`](./Reducer/README.MD) : exercice sur les fonctions _reducer_ et le patron _SAM_
+- [`Hooks`](./Hooks/README.MD) : exercices sur les hooks React
