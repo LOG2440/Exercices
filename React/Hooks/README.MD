@@ -13,4 +13,4 @@ La documentation de [useState](https://react.dev/reference/react/useState) et [u
 Voici les liens vers les différents exercices et leurs énoncés :
 
 - [`infiniteScroll`](./infiniteScroll/README.MD) : implémentation d'un menu déroulant infini
-- ['useStorage`](./useStorage/README.MD) : implémentation d'un hook React personnalisé
+- [`useStorage`](./useStorage/README.MD) : implémentation d'un hook React personnalisé
