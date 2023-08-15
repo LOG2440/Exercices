@@ -14,3 +14,4 @@ Voici les liens vers les différents exercices et leurs énoncés :
 
 - [`Reducer`](./Reducer/README.MD) : exercice sur les fonctions _reducer_ et le patron _SAM_
 - [`Hooks`](./Hooks/README.MD) : exercices sur les hooks React
+- [`Cart`](./Cart/README.MD) : exercice sur les notions de _Context_, _Routing_ et le développement d'applications monopage avec un état partagé
