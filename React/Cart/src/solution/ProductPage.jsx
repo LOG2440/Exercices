@@ -8,7 +8,6 @@ const ProductPage = () => {
     useEffect(() => {
         // Simuler un chargement des items
         const fetchProducts = () => PRODUCTS;
-
         
         setProducts(fetchProducts());
     }, []);

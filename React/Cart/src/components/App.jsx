@@ -1,6 +1,6 @@
-import Header from "./components/Header";
-import ProductPage from "./components/ProductPage";
-import Cart from "./components/Cart";
+import Header from "./Header";
+import ProductPage from "./ProductPage";
+import Cart from "./Cart";
 
 export default function App() {
   return (

@@ -7,8 +7,8 @@ import CartProvider from "./CartProvider";
 export default function App() {
     return (
         <BrowserRouter>
-            <Header></Header>
             <CartProvider>
+                <Header></Header>
                 <Routes>
                     <Route exact path="/" element={<ProductPage />} />
                     <Route path="/cart" element={<Cart />} />
