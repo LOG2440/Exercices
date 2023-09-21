@@ -12,7 +12,7 @@ const ButtonHandler = {
         element.addEventListener("click", this.showValue.bind(this));
 
         // Solution #2 : définir la valeur de this avec ()=>{}
-        // button.addEventListener("click", () => this.showValue);
+        // button.addEventListener("click", () => this.showValue());
     },
 };
 
