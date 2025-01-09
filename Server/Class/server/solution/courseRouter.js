@@ -10,8 +10,8 @@ courseManager.readCoursesFromFile().then(() => {
         res.status(courseManager.courses.length ? 200 : 404).send(courseManager.courses);
     });
 
-    router.get("/obtenirCours/:sigle", async (req, res) => {
-        const course = await courseManager.findCourse(req.params.sigle);
+    router.get("/obtenirCours/:sigle", (req, res) => {
+        const course = courseManager.findCourse(req.params.sigle);
         if (!course) {
             res.status(404).send({ error: "Cours non trouvé" });
             return;
