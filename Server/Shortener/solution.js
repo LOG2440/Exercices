@@ -8,15 +8,20 @@ const SERVER_PORT = 3000;
 const SERVER_URL = `http://localhost:${SERVER_PORT}`;
 
 
-const urlDatabase = [
+const DEFAULT_DATA = [
     { shortcode: "11f4fb", originalUrl: "https://google.com", hits: 0 },
     { shortcode: '8ba743', originalUrl: 'https://polymtl.ca', hits: 0 },
     { shortcode: 'a1b2c3', originalUrl: 'https://developer.mozilla.org/', hits: 0 },
 ];
 
+const urlDatabase = structuredClone(DEFAULT_DATA);
+
 app.delete('/reset', (req, res) => {
     urlDatabase.length = 0;
-    res.json({ message: 'All URLs deleted' });
+    for (const entry of DEFAULT_DATA) {
+        urlDatabase.push(entry);
+    }
+    res.json({ message: 'Database reset' });
 });
 
 // Retourne un code court aléatoire de 6 caractères

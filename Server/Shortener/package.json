@@ -4,7 +4,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "start:solution": "node solution.js"
+    "start:solution": "node solution.js",
+    "test": "node test.js"
   },
   "author": "LOG2440",
   "license": "ISC",
