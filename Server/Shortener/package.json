@@ -4,7 +4,6 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "start:solution": "node solution.js",
     "test": "jest --detectOpenHandles --verbose"
   },
   "author": "LOG2440",
