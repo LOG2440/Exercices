@@ -2,24 +2,18 @@ const express = require('express');
 const app = express();
 const crypto = require('crypto');
 
-app.use(express.json());
+const DEFAULT_DATA = require('./default').DEFAULT_DATA;
+const urlDatabase = structuredClone(DEFAULT_DATA);
 
 const SERVER_PORT = 3000;
 const SERVER_URL = `http://localhost:${SERVER_PORT}`;
 
-
-const DEFAULT_DATA = [
-    { shortcode: "11f4fb", originalUrl: "https://google.com", hits: 0 },
-    { shortcode: '8ba743', originalUrl: 'https://polymtl.ca', hits: 0 },
-    { shortcode: 'a1b2c3', originalUrl: 'https://developer.mozilla.org/', hits: 0 },
-];
-
-const urlDatabase = structuredClone(DEFAULT_DATA);
+app.use(express.json());
 
 app.delete('/reset', (req, res) => {
     urlDatabase.length = 0;
     for (const entry of DEFAULT_DATA) {
-        urlDatabase.push(entry);
+        urlDatabase.push(structuredClone(entry));
     }
     res.json({ message: 'Database reset' });
 });
@@ -105,7 +99,10 @@ router.patch('/:shortcode/reset', (req, res) => {
     res.json({ message: 'Hit count reset' });
 });
 
+function launchServer() {
+    return app.listen(`${SERVER_PORT}`, () => {
+        console.log(`URL shortener running on ${SERVER_URL}`);
+    });
+}
 
-app.listen(`${SERVER_PORT}`, () => {
-    console.log(`URL shortener running on ${SERVER_URL}`);
-});
+module.exports = { launchServer, app };

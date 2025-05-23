@@ -5,12 +5,14 @@
   "scripts": {
     "start": "node server.js",
     "start:solution": "node solution.js",
-    "test": "node test.js"
+    "test": "jest --detectOpenHandles --verbose"
   },
   "author": "LOG2440",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.1.1"
   }
 }
