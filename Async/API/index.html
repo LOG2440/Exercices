@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice Fetch</title>
+  <script src="solution.js" defer></script>
+  <!-- <script src="index.js" defer></script> -->
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #parent {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .game {
+      width: 350px;
+      margin: 5px;
+      border: 2px solid black;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .game * {
+      text-align: center;
+      margin: 2px;
+    }
+
+    #buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="parent">
+    <div class="game">
+      <h2>Game Title</h2>
+      <p>Price : $12.34</p>
+      <p>Normal Price : $44.55</p>
+      <p>Meta Score : 75</p>
+      <a target="_blank" href="https://example.com">
+        <img src="https://via.placeholder.com/150" alt="Game Image">
+      </a>
+    </div>
+  </div>
+  <section id="buttons">
+    <button id="loadButton">Load Games</button>
+    <button id="prevPage" disabled>Previous Page</button>
+    <button id="nextPage">Next Page</button>
+  </section>
+</body>
+
+</html>
