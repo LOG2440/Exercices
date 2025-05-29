@@ -1,6 +1,6 @@
-let currentPage = 1;
+let currentPage = 0;
 
-async function fetchGames(pageIndex = 1) {
+async function fetchGames(pageIndex = 0) {
     const res = await fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=1&pageSize=20&pageNumber=${pageIndex}`);
     const games = await res.json();
 
@@ -25,9 +25,10 @@ async function fetchGames(pageIndex = 1) {
 
 const loadGamesButton = document.getElementById('loadButton');
 loadGamesButton.addEventListener('click', () => {
-    currentPage = 1;
+    currentPage = 0;
     fetchGames(currentPage);
 });
+
 const nextPageButton = document.getElementById('nextPage');
 document.getElementById('nextPage').addEventListener('click', () => {
     currentPage++;
@@ -38,9 +39,9 @@ document.getElementById('nextPage').addEventListener('click', () => {
 
 const prevPageButton = document.getElementById('prevPage');
 document.getElementById('prevPage').addEventListener('click', () => {
-    if (currentPage >= 1) {
+    if (currentPage >= 0) {
         currentPage--;
-        prevPageButton.disabled = currentPage === 1;
+        prevPageButton.disabled = currentPage === 0;
         fetchGames(currentPage);
     }
 });
