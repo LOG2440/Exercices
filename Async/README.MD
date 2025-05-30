@@ -10,7 +10,8 @@ La documentation de [DOM sur Promise](https://developer.mozilla.org/en-US/docs/W
 
 ## Table des matières
 
-Voici les liens vers les différents exercices et leurs énoncés. Vous êtes conseillés de comencer par l'exercice d'introduction :
+Voici les liens vers les différents exercices et leurs énoncés. Vous êtes conseillés de commencer par l'exercice d'introduction :
 
+- [`API`](./API/README.MD) : exercices d'introduction sur l'API `Fetch` et l'utilisation d'un service web externe
 - [`Retry`](./Retry/README.MD) : exercices sur les notions des objets `Promise`
 - [`Class`](./Class/README.MD) : exercices sur l'utilisation de l'API `Fetch` pour communiquer avec un serveur HTTP

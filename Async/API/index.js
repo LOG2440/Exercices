@@ -11,7 +11,7 @@ async function fetchGames(pageIndex = 0) {
 
 }
 
-// TODO : Récupérer les jeux vidéo en rabais de la page 1
+// TODO : Récupérer les jeux vidéo en rabais de la page 0
 const loadGamesButton = document.getElementById('loadButton');
 
 // TODO : Récuprer les prochains 20 jeux vidéo en rabais et activer le bouton "Previous Page"
