@@ -1,6 +1,6 @@
 # Communication avec un service web externe
 
-Cet exerice couvre les notions de communication HTTP à l'aide de l'API `Fetch` avec un service web externe.
+Cet exercice couvre les notions de communication HTTP à l'aide de l'API `Fetch` avec un service web externe.
 
 Le site web de l'exercice permet d'afficher les informations des jeux vidéo en promotion sur la plateforme [Steam](https://store.steampowered.com/). Il utilise l'API de [CheapShark](https://www.cheapshark.com/) pour récupérer les données à afficher.
 
@@ -11,7 +11,7 @@ Voici l'affichage après avoir récupéré les jeux vidéo en promotion :
 
 ## API de CheapShark
 
-Afin de compléter l'exercice, vous aurez à utliser l'[API de CheapShark](https://apidocs.cheapshark.com/), spécifiquement la route `/deals` pour récupérer les jeux vidéo en promotion.
+Afin de compléter l'exercice, vous aurez à utiliser l'[API de CheapShark](https://apidocs.cheapshark.com/), spécifiquement la route `/deals` pour récupérer les jeux vidéo en promotion.
 
 Consultez la documentation pour comprendre les paramètres à envoyer dans la requête et le format de la réponse. Prêtez attention aux paramètres de l'URI de la requête pour obtenir les bonnes informations. Notamment, l'identifiant du magasin (`1` pour Steam), le nombre de jeux à récupérer (`20`) par requête ainsi que la page en cours.
 

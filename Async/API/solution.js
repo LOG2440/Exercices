@@ -30,7 +30,7 @@ loadGamesButton.addEventListener('click', () => {
 });
 
 const nextPageButton = document.getElementById('nextPage');
-document.getElementById('nextPage').addEventListener('click', () => {
+nextPageButton.addEventListener('click', () => {
     currentPage++;
     fetchGames(currentPage);
     prevPageButton.disabled = false;
@@ -38,8 +38,8 @@ document.getElementById('nextPage').addEventListener('click', () => {
 );
 
 const prevPageButton = document.getElementById('prevPage');
-document.getElementById('prevPage').addEventListener('click', () => {
-    if (currentPage >= 0) {
+prevPageButton.addEventListener('click', () => {
+    if (currentPage > 0) {
         currentPage--;
         prevPageButton.disabled = currentPage === 0;
         fetchGames(currentPage);
