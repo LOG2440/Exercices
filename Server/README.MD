@@ -10,7 +10,8 @@ La documentation d'[Express](https://expressjs.com/en/4x/api.html) et [NodeJS](h
 
 ## Table des matières
 
-Voici les liens vers les différents exercices et leurs énoncés. Vous êtes conseillés de comencer par l'exercice d'introduction :
+Voici les liens vers les différents exercices et leurs énoncés.
 
 - [`Class`](./Class/README.MD) : exercice sur les notions de gestion des routes dynamiques et l'accès au système de fichiers
 - [`Limiter`](./Limiter/README.MD) : exercice sur les notions de la librairie `Express`, requêtes HTTP et gestion des ressources du serveur
+- [`Shortener`](./Shortener/README.MD) : exercice sur les notions de gestion des routes dynamiques et services web
