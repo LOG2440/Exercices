@@ -4,13 +4,23 @@ main {
     padding: 5px;
 }
 
-#class-container {
+#class-container,
+#class-teacher-container,
+#teacher-container {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
     margin-bottom: 20px;
     padding-left: 10px;
     ;
+}
+
+.teacher-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
 }
 
 span {

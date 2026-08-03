@@ -41,6 +41,21 @@
         <div class="align">
             <button id="btn-delete-all" onclick="deleteAll()">Tout supprimer!</button>
         </div>
+
+        <h2>COURS ET PROFESSEURS</h2>
+        <div id="class-teacher-container"></div>
+        <h3> Assigner un professeur à un cours</h3>
+        <div class="align">
+            <label for="input-assign-class">Cours : </label>
+            <input id="input-assign-class" type="text" />
+            <label for="select-assign-teacher">Professeur : </label>
+            <select id="select-assign-teacher"></select>
+            <button id="btn-assign-teacher" onclick="assignTeacher()">Assigner</button>
+            <span id="span-assign-result"></span>
+        </div>
+
+        <h2>PROFESSEURS</h2>
+        <div id="teacher-container"></div>
     </main>
 </body>
 
