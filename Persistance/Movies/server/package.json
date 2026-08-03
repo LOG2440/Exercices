@@ -1,16 +1,17 @@
 {
   "name": "movies-search-server",
-  "version": "1.0.0",
-  "description": "Serveur de recherche de films avec MongoDB",
+  "version": "1.1.0",
+  "description": "Serveur de recherche de films avec PostgreSQL",
   "main": "main.js",
   "scripts": {
-    "start": "node ./src/main.js"
+    "start": "node ./src/main.js",
+    "seed": "node ./src/seed.js"
   },
   "author": "LOG2440",
   "license": "CC-BY-3.0",
   "dependencies": {
-    "cors": "2.8.5",
-    "express": "5.1.0",
-    "mongodb": "6.18.0"
+    "cors": "2.8.6",
+    "express": "5.2.1",
+    "pg": "8.22.0"
   }
 }

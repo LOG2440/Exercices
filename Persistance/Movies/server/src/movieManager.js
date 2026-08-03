@@ -1,18 +1,15 @@
-const { MongoClient } = require('mongodb');
-const { DB_CONNECTION_STRING, DB_NAME, DB_COLLECTION_MOVIES } = require('./env');
+const { pool } = require('./db');
+const { FIELDS, SORT_FIELDS, fetchGenres } = require('./util');
 
-let db;
-let moviesCollection;
-
-async function connectToDatabase() {
-    if (!db) {
-        const client = new MongoClient(DB_CONNECTION_STRING);
-        await client.connect();
-        db = client.db(DB_NAME);
-        moviesCollection = db.collection(DB_COLLECTION_MOVIES);
-        console.log('Connexion à MongoDB établie');
-    }
-    return moviesCollection;
+/**
+ * Retourne la liste des genres d'un film.
+ * @param {number} movieId identifiant du film
+ * @returns {Promise<Array<string>>} genres du film, ou tableau vide si le film n'a aucun genre
+ */
+async function getMovieGenres(movieId) {
+    const genresByMovie = await fetchGenres([movieId]);
+    const genres = genresByMovie.get(movieId);
+    return genres ? genres : [];
 }
 
 /**
@@ -37,30 +34,25 @@ async function connectToDatabase() {
  * @returns {Promise<Array>} - Liste des films correspondant aux critères
  */
 async function searchMovies(queryParams) {
-    const collection = await connectToDatabase();
 
     // TODO: Implémenter la logique de recherche
-    // 
-    // 1. Extraire et valider les paramètres de requête
-    // 2. Construire l'objet filter MongoDB
-    // 3. Construire l'objet projection
-    // 4. Construire l'objet sort
-    // 5. Exécuter la requête et retourner les résultats
+    //
+    // 1. Déterminer les champs à retourner à partir de `queryParams.fields` (liste blanche FIELDS)
+    // 2. Construire les conditions du WHERE et le tableau des valeurs des paramètres $1, $2, ...
+    // 3. Construire la liste des colonnes du SELECT et la clause ORDER BY
+    // 4. Exécuter la requête avec pool.query(sql, values)
+    // 5. Récupérer les genres de chaque film trouvé et construire la réponse
 
     // Exemple de base (à remplacer par votre implémentation)
-    const filter = {};
-    const projection = {}; // Exclure _id par défaut
-    const sort = {};
+    const result = await pool.query(`
+        SELECT m.title, m.year, d.name AS "director"
+        FROM movies m
+        INNER JOIN directors d ON d.id = m.director_id`);
 
-    const results = await collection
-        .find(filter)
-        .project(projection)
-        .sort(sort)
-        .toArray();
-
-    return results;
+    return result.rows;
 }
 
 module.exports = {
-    searchMovies
+    searchMovies,
+    getMovieGenres
 };

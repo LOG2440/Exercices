@@ -1,12 +1,16 @@
-// Configuration de l'environnement MongoDB
-// Complétez ces informations selon votre instance MongoDB
+// Configuration de la connexion à PostgreSQL.
+// Complétez ces informations selon votre instance PostgreSQL.
 
-const DB_CONNECTION_STRING = 'mongodb://localhost:27017'; // ou votre string de connection MongoDB Atlas
-const DB_NAME = 'movies_db';
-const DB_COLLECTION_MOVIES = 'movies';
+const DB_CONFIG = {
+  user: process.env.DB_USER || 'postgres',
+  host: process.env.DB_HOST || 'localhost',
+  database: process.env.DB_NAME || 'log2440_films',
+  password: process.env.DB_PASSWORD || 'postgres',
+  port: parseInt(process.env.DB_PORT || '5432'),
 
-module.exports = {
-  DB_CONNECTION_STRING,
-  DB_NAME,
-  DB_COLLECTION_MOVIES
+  max: 10,
+  idleTimeoutMillis: 30000,
+  connectionTimeoutMillis: 2000,
 };
+
+module.exports = { DB_CONFIG };

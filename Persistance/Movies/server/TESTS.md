@@ -6,7 +6,7 @@ Ce fichier contient des exemples de requêtes pour tester votre implémentation.
 
 Ces requêtes peuvent être exécutées dans un terminal ou un outil comme Postman ou ThunderClient.
 
-Chaque requête va retourner au moins 1 résultat basé sur les données d'exemple fournies dans `movies.json`. Assurez-vous que votre serveur est en cours d'exécution avant de lancer ces requêtes.
+Chaque requête va retourner au moins 1 résultat basé sur les données insérées dans les tables par `db/postgres.sql`. Assurez-vous que votre serveur est en cours d'exécution avant de lancer ces requêtes.
 
 ### Tests de base
 
@@ -60,7 +60,7 @@ curl "http://localhost:3000/movies/search?sortBy=boxOffice&sortOrder=desc"
 Résultats : tous les films avec "Avatar" en premier et "Seven Samurai" en dernier
 ```
 
-### Tests de projection
+### Tests de sélection des colonnes
 
 ```bash
 # Seulement titre, année et note
@@ -94,12 +94,55 @@ curl "http://localhost:3000/movies/search?minRuntime=150&country=USA&minRating=8
 Résultats : "Interstellar", "Pulp Fiction"
 ```
 
+### Tests de cas limites et d'injection SQL
+
+Ces requêtes doivent être refusées avec un code `400` et un message d'erreur, jamais exécutées.
+
+```bash
+# Champ de tri qui n'existe pas
+curl "http://localhost:3000/movies/search?sortBy=password"
+Résultat : erreur 400
+
+# Tentative d'injection à travers le tri
+curl "http://localhost:3000/movies/search?sortBy=year;DROP+TABLE+movies--"
+Résultat : erreur 400, la table movies existe toujours
+
+# Tentative d'injection à travers les colonnes retournées
+curl "http://localhost:3000/movies/search?fields=title,(SELECT+1)"
+Résultat : erreur 400
+
+# Inclusion et exclusion combinées
+curl "http://localhost:3000/movies/search?fields=title,-budget"
+Résultat : erreur 400
+
+# Valeur numérique invalide
+curl "http://localhost:3000/movies/search?minRating=abc"
+Résultat : erreur 400
+```
+
+Ces requêtes doivent quant à elles réussir sans lever d'erreur :
+
+```bash
+# Aucun film ne correspond
+curl "http://localhost:3000/movies/search?year=1800"
+Résultat : []
+
+# La valeur recherchée est traitée comme du texte et non comme du SQL
+curl "http://localhost:3000/movies/search?director=%25'+OR+'1'%3D'1"
+Résultat : []
+
+# Le filtre par genre ne doit pas tronquer la liste des genres retournés
+curl "http://localhost:3000/movies/search?genre=Action&fields=title,genre"
+Résultats : "The Matrix" avec ["Action","Sci-Fi"], "Inception" avec ["Action","Sci-Fi","Thriller"],
+            "Seven Samurai" avec ["Action","Drama"], "Avatar" avec ["Action","Adventure","Fantasy"]
+```
+
 ## Validation des résultats
 
 Vérifiez que :
 - Les filtres sont correctement appliqués
 - Le tri fonctionne dans les deux sens
-- La pagination retourne le bon nombre de résultats
-- Les projections incluent/excluent les bons champs
-- Le champ `_id` est exclu par défaut
-- Les paramètres invalides sont bien gérés
+- Les colonnes retournées correspondent aux champs inclus/exclus
+- La colonne `id` n'est jamais retournée
+- Un film est retourné une seule fois, même s'il correspond à plusieurs genres demandés
+- Les paramètres invalides sont bien gérés et aucune valeur reçue du client n'est concaténée dans une requête
