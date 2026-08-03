@@ -1,7 +1,17 @@
-const DB_DB = "database";
-const DB_COLLECTION = "classes";
-const DB_URL = "mongodb+srv://Admin:password@log2440cluster.fzyah.mongodb.net/?retryWrites=true&w=majority";
+// Configuration de la connexion à PostgreSQL.
+// Modifiez ces valeurs (ou définissez les variables d'environnement correspondantes)
+// pour qu'elles correspondent à votre instance PostgreSQL.
 
-exports.DB_DB = DB_DB;
-exports.DB_COLLECTION = DB_COLLECTION;
-exports.DB_URL = DB_URL;
+const DB_CONFIG = {
+    user: process.env.DB_USER || "postgres",
+    host: process.env.DB_HOST || "localhost",
+    database: process.env.DB_NAME || "log2440_cours",
+    password: process.env.DB_PASSWORD || "postgres",
+    port: parseInt(process.env.DB_PORT || "5432"),
+
+    max: 10,
+    idleTimeoutMillis: 30000,
+    connectionTimeoutMillis: 2000,
+};
+
+module.exports = { DB_CONFIG };

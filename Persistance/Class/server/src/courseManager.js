@@ -74,6 +74,49 @@ class CourseManager {
         }
     }
 
+    // Les méthodes suivantes n'ont pas d'équivalent avec la persistance dans un fichier JSON :
+    // il n'y a pas de professeurs dans courses.json. Elles font partie du travail à compléter
+    // et retournent des valeurs vides tant qu'elles ne sont pas implémentées avec PostgreSQL.
+
+    /**
+     * Retourne tous les cours avec le nom de leur professeur (ou null s'il n'y en a pas).
+     * @returns {Promise<Array<{sigle: string, credits: number, professeur: string|null}>>}
+     */
+    async getCoursesWithTeachers() {
+        // TODO : implémenter avec une relation entre courses et teachers
+        return [];
+    }
+
+    /**
+     * Retourne tous les professeurs avec leur nombre de cours.
+     * @returns {Promise<Array<{id: number, name: string, email: string, nb_cours: number}>>}
+     */
+    async getTeachers() {
+        // TODO : implémenter la récupération des professeurs
+        return [];
+    }
+
+    /**
+     * Assigne un professeur à un cours. `teacherId` à null retire le professeur du cours.
+     * @param {string} sigle sigle du cours à modifier
+     * @param {number|null} teacherId identifiant du professeur
+     * @returns {Promise<boolean>} true si le cours a été modifié
+     */
+    async assignTeacher(sigle, teacherId) {
+        // TODO : implémenter en considérant les relations entre les tables.
+        return false;
+    }
+
+    /**
+     * Supprime un professeur. Ses cours sont conservés, mais n'ont plus de professeur assigné.
+     * @param {number} id identifiant du professeur à supprimer
+     * @returns {Promise<boolean>} true si le professeur a été supprimé
+     */
+    async deleteTeacher(id) {
+        // TODO : implémenter la suppression d'un professeur
+        return false;
+    }
+
 }
 
 module.exports = CourseManager;
