@@ -33,4 +33,4 @@ Vous n'avez pas besoin de librairies ou code externe pour exécuter le code de l
 
 ## Solution
 
-Une solution possible est disponible dans [solution.js](./solution.js). Vous pouvez exécuter le code directement dans un terminal avec `node solution.js`. Notez qu'il peut avoir plusieurs manières d'implémenter la nouvelle action `RENAME` qui produisent le même comportement final. 
+Une solution possible est disponible dans [solution.js](./solution.js). Vous pouvez exécuter le code directement dans un terminal avec `node solution.js`. Notez qu'il peut y avoir plusieurs manières d'implémenter la nouvelle action `RENAME` qui produisent le même comportement final. 

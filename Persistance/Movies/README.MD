@@ -6,7 +6,7 @@ L'exercice couvre les notions de base des requêtes PostgreSQL avec le pilote No
 
 Le code source initial du serveur vous est fourni dans le répertoire `server`. Vous devez lancer le serveur avec la commande `npm start` dans le répertoire `server`.
 
-N'oubliez pas d'installer les dépendances nécessaires avec `npm ci` dans avant de lancer le serveur.
+N'oubliez pas d'installer les dépendances nécessaires avec `npm ci` avant de lancer le serveur.
 
 ## Objectif de l'exercice
 

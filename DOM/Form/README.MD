@@ -36,7 +36,7 @@ Vous devez implémenter une sauvegarde d'un thème visuel configurable à traver
 
 Par défaut, le fichier [shared.css](./css/shared.css) contient 3 variables CSS globales qui définissent les couleurs du texte, de la bordure et de l'arrière-plan du formulaire de la page `index.html`.
 
-La page [theme.html](./theme.html) présente un éditeur intéractif des 3 couleurs du site. Un changement à travers des champs de saisie de couleur à gauche est reflété dans le rectangle de prévisualisation à droite.
+La page [theme.html](./theme.html) présente un éditeur interactif des 3 couleurs du site. Un changement à travers des champs de saisie de couleur à gauche est reflété dans le rectangle de prévisualisation à droite.
 
 ### Éditeur de couleurs
 

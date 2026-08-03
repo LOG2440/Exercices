@@ -10,7 +10,7 @@ La documentation de [DOM sur MDN](https://developer.mozilla.org/en-US/docs/Web/A
 
 ## Table des matières
 
-Voici les liens vers les différents exercices et leurs énoncés. Vous êtes conseillés de comencer par l'exercice d'introduction :
+Voici les liens vers les différents exercices et leurs énoncés. Vous êtes conseillés de commencer par l'exercice d'introduction :
 
 - [`Builder`](./Builder/README.MD) : exercices sur les notions de création dynamique d'éléments HTML à travers les méthodes du DOM
 - [`Player`](./Player/README.MD) : exercices sur les notions de gestion des événements des éléments du DOM

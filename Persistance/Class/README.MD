@@ -1,6 +1,6 @@
 # Gestionnaire de cours et persistance avec PostgreSQL
 
-Cet exercice est une continuation de l'exercice [suivant sur les serveurs dynamiques](https://github.com/LOG2440/Exercices/tree/master/Server/Class) et se concentre sur le partie persistance des données.
+Cet exercice est une continuation de l'exercice [suivant sur les serveurs dynamiques](https://github.com/LOG2440/Exercices/tree/master/Server/Class) et se concentre sur la partie persistance des données.
 
 Les fonctionnalités existantes sont les mêmes que l'exercice original. Le code source est majoritairement le même, sauf quelques ajouts mineurs du côté serveur dynamique, mais les fonctionnalités principales sont pareilles.
 

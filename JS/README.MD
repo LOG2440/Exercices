@@ -10,7 +10,7 @@ La documentation de [JS sur MDN](https://developer.mozilla.org/en-US/docs/Web/Ja
 
 ## Table des matières
 
-Voici les liens vers les différents exercices et leurs énoncés. Vous êtes conseillés de comencer par l'exercice d'introduction :
+Voici les liens vers les différents exercices et leurs énoncés. Vous êtes conseillés de commencer par l'exercice d'introduction :
 
 - [`Functions`](./Functions/README.MD) : exercices sur les fonctions, portée et fermetures en JavaScript
 - [`Objects`](./Objects/README.MD) : exercices sur les objets en JavaScript

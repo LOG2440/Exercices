@@ -17,9 +17,9 @@ let res = arr.map((val, index, arr) => {
 });
 console.log(res);
 /* Valeur attendue :
-[ { value: 1, index: 0, array: [ 1, 2, 3 ] }, 
-  { value: 2, index: 1, array: [ 1, 2, 3 ] }, 
-  { value: 3, index: 2, array: [ 1, 2, 3 ] } ] 
+[ { value: 1, index: 0, array: [ 1, 2, 3 ] }, 
+  { value: 2, index: 1, array: [ 1, 2, 3 ] }, 
+  { value: 3, index: 2, array: [ 1, 2, 3 ] } ] 
 */
 ```
 
@@ -32,7 +32,7 @@ Une solution est disponible dans le fichier [solution.js](./custom_map/solution.
 
 L'exercice est disponible dans le répertoire [grouping](./grouping/) et le code à modifier est disponible dans le fichier [group.js](./grouping/group.js).
 
-Vous devez implémenter une manière de regrouper des objets selon une propriété commune. Dans cet exemple, vous avez un tableau d'objets dont le format est `{name : "X", team: Y}`. Vous devez les regrouper selon selon leur valeur de `team`. 
+Vous devez implémenter une manière de regrouper des objets selon une propriété commune. Dans cet exemple, vous avez un tableau d'objets dont le format est `{name : "X", team: Y}`. Vous devez les regrouper selon leur valeur de `team`. 
 
 Le résultat final doit être un tableau dont chaque objet est du format suivant : `{team: Y, members: [A, B, C]}` où `A`, `B`, `C` sont les membres de l'équipe `Y`. Consultez le fichier initial pour un exemple de la valeur attendue en fonction du tableau initial fourni.
 
@@ -40,7 +40,7 @@ Vous devez implémenter ce regroupement en utilisant uniquement des fonctions d'
 
 ## Solution
 
-Une solution est disponible dans le fichier [solution.js](./grouping/solution.js). Notez qu'il peut avoir plusieurs solutions possibles valides à cet exercice.
+Une solution est disponible dans le fichier [solution.js](./grouping/solution.js). Notez qu'il peut y avoir plusieurs solutions possibles valides à cet exercice.
 
 # Exercice 3 : tri à critères multiples
 
@@ -57,4 +57,4 @@ Votre implémentation ne doit pas modifier le tableau `books`. Celui-ci doit êt
 
 ## Solution
 
-Une solution est disponible dans le fichier [solution.js](./multi_sort/solution.js). Notez qu'il peut avoir plusieurs solutions possibles valides à cet exercice.
+Une solution est disponible dans le fichier [solution.js](./multi_sort/solution.js). Notez qu'il peut y avoir plusieurs solutions possibles valides à cet exercice.

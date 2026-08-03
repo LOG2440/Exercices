@@ -4,7 +4,7 @@ Le _Rate Limiting_ est un mécanisme qui permet de gérer l'accès à un serveur
 
 Par exemple, un service peut limiter un utilisateur à 1000 requêtes par jour ou 1000 requêtes gratuites avant de rendre le service payant. 
 
-Habituellement, ce mécanisme est implémenté à l'aide d'un jeton généré par le serveur et donné au client. Ce jeton doit être envoyé avec chaque requête pour identifier l'utilisateur et lui donner accès au service. Le serveur garde un compteur du nombre de requêtes effecutées par le client et donne ou non l'accès au service en fonction de la limite configurée.
+Habituellement, ce mécanisme est implémenté à l'aide d'un jeton généré par le serveur et donné au client. Ce jeton doit être envoyé avec chaque requête pour identifier l'utilisateur et lui donner accès au service. Le serveur garde un compteur du nombre de requêtes effectuées par le client et donne ou non l'accès au service en fonction de la limite configurée.
 
 ## Installation des dépendances et lancement du serveur
 
@@ -16,12 +16,12 @@ Vous pouvez lancer le serveur avec la commande `npm start`.
 
 Cet exercice est une mise en oeuvre d'un mécanisme de _rate limiting_ d'un service qui permet d'accéder à des informations (ici l'ensemble des oeuvres de la série `Discworld` de l'auteur Terry Pratchett). Ce service est accessible seulement à travers un jeton envoyé dans l'en-tête des requêtes HTTP et possède une limite de 5 (configurable dans le serveur) requêtes par jeton. 
 
-Vous devez faire appel aux notions d'utiliastion de la librairie Express et la sémantique du protocole HTTP.
+Vous devez faire appel aux notions d'utilisation de la librairie Express et la sémantique du protocole HTTP.
 
 
 ## Site Web et côté client
 
-Le dossier [client](./client/) contient un site web qui intéragit avec le service web. Le code dans [script.js](./client/script.js) fourni vous aidera à comprendre comment le service fonctionne et quels sont les différents codes de retours attendus par vos gestionnaires de routes. Vous êtres encouragés de consulter le code du client avant de commencer à implémenter votre solution.
+Le dossier [client](./client/) contient un site web qui interagit avec le service web. Le code dans [script.js](./client/script.js) fourni vous aidera à comprendre comment le service fonctionne et quels sont les différents codes de retours attendus par vos gestionnaires de routes. Vous êtes encouragés de consulter le code du client avant de commencer à implémenter votre solution.
 
 Voici un exemple du site web après avoir effectué les actions suivantes :
 - Obtenir un jeton
@@ -51,11 +51,11 @@ Dans les 2 cas, vous devez accepter une requête sur le préfixe `/books` seulem
 
 Pour chaque accès aux données, vous devez vérifier si le jeton n'a pas atteint sa limite de requêtes configurée à sa création. 
 
-Si la limite est atteinte, la réponse du serveur doit contenir un code HTTP en lien avec le problème et ne pas donner accès aux donnnées. Si la limite n'est pas atteinte, le compteur associé au jeton doit être décrémenté et la gestion de la requête devrait avoir lieu tel que décrit plus haut.
+Si la limite est atteinte, la réponse du serveur doit contenir un code HTTP en lien avec le problème et ne pas donner accès aux données. Si la limite n'est pas atteinte, le compteur associé au jeton doit être décrémenté et la gestion de la requête devrait avoir lieu tel que décrit plus haut.
 
 Vous devez compléter le gestionnaire de la route `PATCH /token/reset` qui permet de réinitialiser la limite d'un jeton à sa valeur initiale (`MAX_COUNT`). Un client peut envoyer son jeton et demander à ce que sa limite soit remise à sa valeur maximale, peu importe sa valeur en cours. Vous devez gérer le cas où la demande de réinitialisation ne contient pas un jeton valide.
 
-La réponse de toutes ces routes doit contenir l'en-tête `X-LIMIT` dont la valeur est le nombre de requêtes restantes pour aider le client de connaitre ses limites.
+La réponse de toutes ces routes doit contenir l'en-tête `X-LIMIT` dont la valeur est le nombre de requêtes restantes pour aider le client à connaître ses limites.
 
 # Exercice supplémentaire
 

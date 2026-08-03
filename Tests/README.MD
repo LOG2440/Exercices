@@ -10,7 +10,7 @@ La documentation de [Jest](https://jestjs.io/docs/getting-started) vous sera ég
 
 ## Table des matières
 
-Voici les liens vers les différents exercices et leurs énoncés. Vous êtes conseillés de comencer par l'exercice d'introduction :
+Voici les liens vers les différents exercices et leurs énoncés. Vous êtes conseillés de commencer par l'exercice d'introduction :
 
 - [`Scores`](./Scores/README.MD) : exercices sur les notions de développement piloté par les tests
 - [`TicTacToe`](./TicTacToe/README.MD) : exercice sur les notions de tests unitaires d'une application web

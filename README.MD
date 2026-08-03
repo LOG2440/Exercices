@@ -2,9 +2,9 @@
 
 Les notions de développement web sont le mieux compris lorsqu'on les met en pratique. À cette fin, cet entrepôt contient un ensemble d'exercices qui couvrent les différentes notions du cours.
 
-L'entrepôt est composé de différents répertoires classés en fonction d'une thèmatique du cours. Chaque répertoire contient 1 ou plusieurs exercices sur la thématique. Chaque exercice vient avec une solution possible.
+L'entrepôt est composé de différents répertoires classés en fonction d'une thématique du cours. Chaque répertoire contient 1 ou plusieurs exercices sur la thématique. Chaque exercice vient avec une solution possible.
 
-Vous êtes fortement encouragés d'essayer de compléter l'exercice avant de consulter la solution offerte. Notez que dans certains cas, il peut avoir plusieurs bonnes réponses possibles, surtout pour un exercice d'implémentation de code.
+Vous êtes fortement encouragés d'essayer de compléter l'exercice avant de consulter la solution offerte. Notez que dans certains cas, il peut y avoir plusieurs bonnes réponses possibles, surtout pour un exercice d'implémentation de code.
 
 # Répertoire des exercices
 
@@ -19,4 +19,3 @@ Voici l'ensemble des catégories d'exercices disponibles. Chaque catégorie poss
 - [Server](./Server/README.MD) : Exercices sur les notions de serveurs dynamiques
 - [Persistance](./Persistance/README.MD) : Exercices sur les notions de persistance avec la base de données MongoDB
 - [React](./React/README.MD) : Exercices sur les notions de développement de sites web avec la librairie ReactJS
-

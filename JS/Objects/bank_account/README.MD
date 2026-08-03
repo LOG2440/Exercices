@@ -24,7 +24,7 @@ console.log(secondAccount.deposit(-20)); // "Impossible de déposer un montant n
 
 **Notes** : 
 - lorsque vous transformez `BankAccount` en classe, n'oubliez pas qu'il faut utiliser le mot clé `new` lors de son utilisation.
-- l'accès à une variable de classe privée `#x` va générer une erreur et non retourner `undefined` comme l'exemple plus haut. Le résultat de certaines commandes sera légérement différent.
+- l'accès à une variable de classe privée `#x` va générer une erreur et non retourner `undefined` comme l'exemple plus haut. Le résultat de certaines commandes sera légèrement différent.
 
 
 # Solution

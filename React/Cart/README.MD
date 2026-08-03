@@ -1,12 +1,12 @@
-# Application Monopage et gestion d'état partage
+# Application Monopage et gestion d'état partagé
 
-React permet le développement d'application monopages (_single page application_) qui sont caractérisées par le fait qu'on a une seule page HTML et le contenu est chargé dynamiquement en fonction des besoins de l'application. Même si on défini plusieurs routes, le document HTML reste le même et une partie du DOM est modifiée pour simuler le changement des pages.
+React permet le développement d'application monopages (_single page application_) qui sont caractérisées par le fait qu'on a une seule page HTML et le contenu est chargé dynamiquement en fonction des besoins de l'application. Même si on définit plusieurs routes, le document HTML reste le même et une partie du DOM est modifiée pour simuler le changement des pages.
 
 Ceci permet de plus facilement garder un visuel commun entre les "pages" du site web sans dupliquer le HTML. De plus, comme le contexte JS est le même, il est possible de partager un état entre plusieurs pages sans passer par un intermédiaire comme le _Storage API_ ou un serveur externe.
 
 React permet de gérer un état partagé par plusieurs composantes différents à travers le concept de `Context`. Rappel : une composante a accès à un contexte ssi son fournisseur (`Provider`) est son ancêtre dans l'arborescence des composantes. 
 
-React utilise également le paton SAM (_State Action Model_) utilisant la notion de `reducer` pour la gestion d'un état à travers plusieurs composantes.
+React utilise également le patron SAM (_State Action Model_) utilisant la notion de `reducer` pour la gestion d'un état à travers plusieurs composantes.
 
 ## Installation des dépendances et lancement du projet
 
@@ -26,7 +26,7 @@ Le code de départ est disponible dans le répertoire [components](./src/compone
 
 ## Partie 1 : gestion des routes et chargement des produits
 
-Vous devez modifier le code des composantes [App](./src/components/App) et [Header](./src/components/Header.jsx) pour séparer la vue des produits ([ProductPage](./src/components/ProductPage.jsx)) et la vue du pariner ([Cart](./src/components/Cart.jsx)) dans 2 pages différentes (voir plus haut). Les 2 pages devraient partager la même instance de `Header`.
+Vous devez modifier le code des composantes [App](./src/components/App) et [Header](./src/components/Header.jsx) pour séparer la vue des produits ([ProductPage](./src/components/ProductPage.jsx)) et la vue du panier ([Cart](./src/components/Cart.jsx)) dans 2 pages différentes (voir plus haut). Les 2 pages devraient partager la même instance de `Header`.
 
 La librairie `React Router DOM` est déjà incluse dans la liste des dépendances du projet.
 
@@ -58,6 +58,6 @@ Voici le rendu de la page `/cart` après avoir ajouté 2 produits dans le panier
 
 ## Solution
 
-Une solution est disponible dans le répertoire [solution](./src/solution). Vous pouvez charger la composante de ce fichier dans [main.jsx](./src/main.jsx) en modifiant la composante `App` importé dans les lignes 5 et 6.
+Une solution est disponible dans le répertoire [solution](./src/solution). Vous pouvez charger la composante de ce fichier dans [main.jsx](./src/main.jsx) en modifiant la composante `App` importée dans les lignes 5 et 6.
 
-Notez que le format exact du contenu des actions de votre réducer est laissé à votre choix et votre réponse peut varier du corriger tout en état valide.
+Notez que le format exact du contenu des actions de votre réducer est laissé à votre choix et votre réponse peut varier du corrigé tout en étant valide.

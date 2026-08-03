@@ -23,7 +23,7 @@ Voici les éléments à compléter :
     - La couleur de fond doit être différente lorsque survolée.
     - Le bouton `...` doit être dans le coin supérieur droit.
     - L'avatar doit être aligné à gauche.
-    - Les informations doient être alignées à droite et centrés entre-eux.
+    - Les informations doivent être alignées à droite et centrés entre-eux.
     - Le poste doit avoir un arrière-plan qui prend tout l'espace disponible.
     - L'arrière-plan du poste doit avoir une couleur différente si la personne est stagiaire.
 
@@ -51,8 +51,6 @@ Vous pouvez référencer le fichier en modifiant l'attribut `href` de la ligne <
 Le fichier contient les règles de mise en page possibles pour l'exercice #1. Notez qu'il peut avoir plus qu'une bonne réponse possible qui mène au même résultat.
 
 Une solution possible qui utilise uniquement des `grid` est disponible dans le fichier [solution_grid.css](./solution_grid.css). Notez que, généralement, l'utilisation de `flexbox` est à préférer pour une mise en page en 1 dimension des éléments HTML.
-
-
 
 ### Sources des images utilisées
 

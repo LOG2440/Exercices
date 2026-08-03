@@ -11,7 +11,7 @@ L'exercice est divisé en 2 parties :
 
 Implémentez un menu de navigation qui utilise les images des logos des différents navigateurs pour rediriger l'utilisateur vers les différentes pages spécifiques de chaque navigateur dans [index.html](./index.html). Rappel : le lien entre différentes pages HTML se fait à travers la balise `<a>` (_anchor_) et un de ses attributs spécifiques.
 
-Chaque lien de navigation devrait avoir une info-bulle (_tooltip_) avec le nom du navigateur lorsqu'un utilisateur place sa souris par-dessus. Il existe un [attribut universel](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes) qui permet une telle fonctionnalitée. 
+Chaque lien de navigation devrait avoir une info-bulle (_tooltip_) avec le nom du navigateur lorsqu'un utilisateur place sa souris par-dessus. Il existe un [attribut universel](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes) qui permet une telle fonctionnalité. 
 
 Astuces : 
 - l'élément [`<nav>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav) représente sémantiquement la notion de menu de navigation dans une page web.
@@ -19,7 +19,7 @@ Astuces :
 
 ## 2. Mise en page
 
-Par défaut, les images fournis sont toutes de tailles différentes, ce qui nuit à l'expérience utilisateur. Il est possible d'uniformiser l'affichage de ces éléments à travers du code `CSS`. Nous voudrions avoir des images de la même taille qui occupent tout l'espace horizontal avec un espacement uniforme entre chaque logo.
+Par défaut, les images fournies sont toutes de tailles différentes, ce qui nuit à l'expérience utilisateur. Il est possible d'uniformiser l'affichage de ces éléments à travers du code `CSS`. Nous voudrions avoir des images de la même taille qui occupent tout l'espace horizontal avec un espacement uniforme entre chaque logo.
 
 Le fichier [styles.css](./styles.css) contient quelques règles CSS pour une mise en page uniforme, mais n'est pas lié au document HTML. Vous devez faire le lien entre les 2 documents.
 

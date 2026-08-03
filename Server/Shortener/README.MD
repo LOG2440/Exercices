@@ -2,7 +2,7 @@
 
 Un _URL Shortener_ est un service qui permet de réduire la taille d'une URL en la remplaçant par une version plus courte. Par exemple, l'URL `https://www.google.com/search?q=shortener` pourrait être remplacée par `https://short.com/abc123`.
 
-Ce mécansime est très utile pour partager des liens sur les réseaux sociaux ou dans des messages texte, où la longueur des caractères est limitée. Habituellement, ce service est un intermédiaire qui redirige l'utilisateur vers l'URL d'origine lorsqu'il clique sur le lien raccourci. Par exemple, si un utilisateur clique sur `https://short.com/abc123`, il sera redirigé vers `https://www.google.com/search?q=shortener`.
+Ce mécanisme est très utile pour partager des liens sur les réseaux sociaux ou dans des messages texte, où la longueur des caractères est limitée. Habituellement, ce service est un intermédiaire qui redirige l'utilisateur vers l'URL d'origine lorsqu'il clique sur le lien raccourci. Par exemple, si un utilisateur clique sur `https://short.com/abc123`, il sera redirigé vers `https://www.google.com/search?q=shortener`.
 
 
 ## Installation des dépendances et lancement du serveur
@@ -35,7 +35,7 @@ Vous devez compléter l'implémentation du service de raccourcissement d'URL. Le
 }
 ```
 
-Cette informations est également sauvegardée dans la base de données du serveur (objet `urlDatabase`). Dans le cas où l'URL est déjà présente dans la base de données, le service doit retourner le même code court que celui déjà présent ainsi qu'un code de réponse HTTP approprié.
+Cette information est également sauvegardée dans la base de données du serveur (objet `urlDatabase`). Dans le cas où l'URL est déjà présente dans la base de données, le service doit retourner le même code court que celui déjà présent ainsi qu'un code de réponse HTTP approprié.
 
 ## Exercice #2 : redirection vers l'URL d'origine
 
@@ -43,7 +43,7 @@ Le service doit être capable de rediriger l'utilisateur vers l'URL d'origine lo
 
 Vous devez compléter le _middleware_ `findUrl` qui permet d'extraire le code court de la requête (ex : `/sh/abc123` donnerait `abc123`) et de le rechercher dans la base de données. Si le code court est trouvé, l'entrée correspondante dans la base de données doit être ajoutée à l'objet `req` pour être utilisée dans la suite du traitement. Si le code court n'est pas trouvé, le _middleware_ doit retourner un code de réponse HTTP approprié.
 
-**Note** : la gestion des routes pour Exercice #2 et Exerice #3 doit être faite par un routeur Express qui gère le préfixe `/sh`. Vous devez donc configurer et attacher ce routeur au serveur.
+**Note** : la gestion des routes pour Exercice #2 et Exercice #3 doit être faite par un routeur Express qui gère le préfixe `/sh`. Vous devez donc configurer et attacher ce routeur au serveur.
 
 ## Exercice #3 : statistiques d'accès
 
@@ -58,4 +58,4 @@ Le service doit également permettre de réinitialiser le nombre d'accès à 0. 
 
 Une solution possible est fournie dans le fichier [solution.js](./solution.js). Vous pouvez l'utiliser pour valider votre solution et vous aider à comprendre le fonctionnement du service. Il suffit de remplacer le module importé au début du fichier [server.js](./server.js) par le module de la solution.
 
-L'exercice est accompagné de tests automatisés unitaires et de bout en bout pour vous aider à valider votre solution. Vous pouvez les exécuter avec la commande `npm test`. Notez que les tests assumment l'utilisation de certains verbes HTTP qui peuvent différer de ceux de votre utilisation. Vous pouvez les modifier pour qu'ils correspondent à votre implémentation. Vous pouvez également ajouter vos propres tests pour valider votre solution.
+L'exercice est accompagné de tests automatisés unitaires et de bout en bout pour vous aider à valider votre solution. Vous pouvez les exécuter avec la commande `npm test`. Notez que les tests assument l'utilisation de certains verbes HTTP qui peuvent différer de ceux de votre utilisation. Vous pouvez les modifier pour qu'ils correspondent à votre implémentation. Vous pouvez également ajouter vos propres tests pour valider votre solution.

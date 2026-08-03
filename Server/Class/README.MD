@@ -1,8 +1,8 @@
 # Gestionnaire de cours et persistance locale
 
-Cet exercice est une continuation de l'exercice [suivant sur l'API Fetch](https://github.com/LOG2440/Exercices/tree/master/Async/Class) et se concentre sur le partie serveur du projet.
+Cet exercice est une continuation de l'exercice [suivant sur l'API Fetch](https://github.com/LOG2440/Exercices/tree/master/Async/Class) et se concentre sur la partie serveur du projet.
 
-Les fonctionnalités du client les mêmes que l'exercice original avec 1 ajout supplémentaire : un utilisateur peut demander la suppression de tous les cours enregistrés sur le serveur à l'aide d'une requête `DELETE /cours/supprimerTout`. 
+Les fonctionnalités du client sont les mêmes que l'exercice original avec 1 ajout supplémentaire : un utilisateur peut demander la suppression de tous les cours enregistrés sur le serveur à l'aide d'une requête `DELETE /cours/supprimerTout`. 
 
 L'exercice couvre les notions de la gestion des routes de la librairie Express et l'utilisation du mode `fs` pour accéder au système de fichiers. 
 
@@ -18,7 +18,7 @@ N'oubliez pas d'installer les dépendances nécessaires avec `npm ci` dans les d
 
 Contrairement à l'exercice initial, on voudrait mettre en place une persistance de l'information qui reste disponible même si le serveur est redémarré. Pour faire ceci, vous devez récupérer les données des cours du fichier [courses.json](./server/data/courses.json) au lancement du serveur et les charger en mémoire. Si le fichier est vide ou n'existe pas, le serveur devrait initialiser un tableau vide en mémoire.
 
-Le fichier doit être mis à jour à chaque fois que les données sont modifiées : ajout, modification ou supression d'un ou plusieurs cours. *Note* : si vous voulez garder l'indendation du fichier, vous pouvez appeler `JSON.stringify(data, null, 4)` pour indenter le contenu de l'objet `data` de 4 espaces (ou toute autre valeur entière positive).
+Le fichier doit être mis à jour à chaque fois que les données sont modifiées : ajout, modification ou suppression d'un ou plusieurs cours. *Note* : si vous voulez garder l'indentation du fichier, vous pouvez appeler `JSON.stringify(data, null, 4)` pour indenter le contenu de l'objet `data` de 4 espaces (ou toute autre valeur entière positive).
 
 La nouvelle fonctionnalité de suppression complète devrait également supprimer le fichier `courses.json` du système de fichiers. La liste des cours en mémoire devrait également être réinitialisée.
 
@@ -30,7 +30,7 @@ Comme `courses.json` est suivi par Git, tout changement du fichier causera un ch
 
 Dans sa version initiale, toutes les routes du service de gestion de cours ont un préfixe `/cours` dupliqué. Vous devez modifier le code pour retirer cette duplication.
 
-*Astuce* : lorsqu'un projet commencer à grandir, c'est souvent une bonne idée de séparer le code dans plusieurs fichiers. Pensez à construire votre solution avec plus qu'un seul fichier comme le code de départ dans `main.js`.
+*Astuce* : lorsqu'un projet commence à grandir, c'est souvent une bonne idée de séparer le code dans plusieurs fichiers. Pensez à construire votre solution avec plus qu'un seul fichier comme le code de départ dans `main.js`.
 
 ### Rétrocompatibilité de la solution
 

@@ -13,7 +13,7 @@ L'exercice est disponible dans le répertoire [team_manager](./team_manager/) et
 
 La page permet de charger une liste prédéterminée d'équipes de hockey dans des balises `<li>` à travers un bouton dans la page. Le nom de l'équipe est caché par un texte générique `Team #X` (X étant la position dans la liste initiale) et l'utilisateur doit cliquer sur le texte pour afficher le nom de l'équipe.
 
-Par défaut, toutes les entrées dans la page afficheront le même nom d'équipe. Basé sur le code JS, vous dévez expliquer pourquoi est-ce le cas.
+Par défaut, toutes les entrées dans la page afficheront le même nom d'équipe. Basé sur le code JS, vous devez expliquer pourquoi est-ce le cas.
 
 Vous devez modifier le code pour obtenir le comportement désiré, c.à.d `Team #3` devrait être remplacé par `Maple Leafs` (3e élément du tableau `teams`).
 
@@ -21,7 +21,7 @@ Vous devez donner 2 solutions possibles, avec au moins une des solutions utilisa
 
 ## Solution
 
-Deux solutions possibles sont disponibles dans le fichier [solution.js](./team_manager/solution.js). Vous pouvez référer ce fichier en modifiant l'attribut `src` de la balise `<script>` à la ligne 7 d'`index.html`. 
+Deux solutions possibles sont disponibles dans le fichier [solution.js](./team_manager/solution.js). Vous pouvez référencer ce fichier en modifiant l'attribut `src` de la balise `<script>` à la ligne 7 d'`index.html`. 
 
 Pour tester les 2 solutions, changez la valeur de la variable `SOLUTION` dans le fichier. En fonction de la solution choisie, un texte différent sera affiché sous la liste des équipes sur la page web.
 
@@ -62,7 +62,7 @@ console.log(fordFactory.carsBuilt()); // 0
 
 const mustangBuilder = fordFactory.carBuilder('Mustang');
 const mustang = mustangBuilder(1970);
-console.log(mustang.info()); // Ford Mustant : 1970
+console.log(mustang.info()); // Ford Mustang : 1970
 console.log(fordFactory.carsBuilt()); // 1
 
 const focusBuilder = fordFactory.carBuilder('Focus');
@@ -89,4 +89,4 @@ Expliquez pourquoi est-ce qu'il y a une différence entre l'affichage des 2 `con
 
 La solution de l'exercice est disponible dans le fichier [solution.js](./car_factory/solution.js).
 
-Notez qu'il a plus qu'une solution possible pour la 2e partie de l'exercice et la solution peut dépendre de votre implémention de la 1re partie de l'exercice.
+Notez qu'il y a plus qu'une solution possible pour la 2e partie de l'exercice et la solution peut dépendre de votre implémentation de la 1re partie de l'exercice.
