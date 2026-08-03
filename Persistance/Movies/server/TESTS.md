@@ -2,6 +2,16 @@
 
 Ce fichier contient des exemples de requêtes pour tester votre implémentation.
 
+## Automatiser les tests
+
+Toutes les combinaisons décrites dans ce fichier sont aussi disponibles sous forme de tests automatisés (Jest + Supertest) dans le répertoire [tests](./tests). Assurez-vous d'avoir une base PostgreSQL accessible (voir [env.js](./src/env.js)), puis lancez :
+
+```bash
+npm test
+```
+
+La base de données est réinitialisée avec les données de test avant l'exécution, comme au démarrage du serveur. Les tests de `movieSearch.test.js` échoueront jusqu'à ce que `searchMovies` soit complété dans [movieManager.js](./src/movieManager.js).
+
 ## Exemples de requêtes
 
 Ces requêtes peuvent être exécutées dans un terminal ou un outil comme Postman ou ThunderClient.
