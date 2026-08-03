@@ -2,7 +2,7 @@
 
 ## Mise en situation
 
-Le code fourni est une implémentation simple du jeu TicTacToe entre 2 joueurs : `X` et `O`. Vous pouvez essayer le site web en lanceant un serveur statique avec la commande `npm start`. Assurez-vous d'installer les dépendances avec `npm ci` en premier.
+Le code fourni est une implémentation simple du jeu TicTacToe entre 2 joueurs : `X` et `O`. Vous pouvez essayer le site web en lançant un serveur statique avec la commande `npm start`. Assurez-vous d'installer les dépendances avec `npm ci` en premier.
 
 Commençant par `X`, chaque joueur peut cliquer sur une des 9 cases vides du plateau de jeu et y indiquer son identifiant. Le jeu se termine si un joueur place 3 fois son identifiant dans une ligne (horizontale, verticale ou diagonale) ou s'il ne reste plus de cases vides à cliquer. Tout clic après la fin d'une partie est ignoré.
 
@@ -31,10 +31,10 @@ Les dépendances nécessaires sont définies dans le fichier [package.json](./pa
 
 Vous pouvez vérifier votre code avec les commandes `npm run test` et `npm run coverage` qui vont exécuter les tests sur votre code et, dans le cas de la 2e commande, calculer le taux de couverture.
 
-**Important** : une couverture de 100% n'est pas un garant de code complété. Assurez-vous que tous les tests que vous avez implémenté réussissent.
+**Important** : une couverture de 100% n'est pas un garant de code complété. Assurez-vous que tous les tests que vous avez implémentés réussissent.
 
 # Solution
 
-Une solution est disponible dans les fichiers [boardManager.solution.test.js](./tests/boardManager.solution.test.js) et [tictacToe.solution.test.js](./tests/ticTacToe.solution.test.js). Notez qu'il peut avoir plus qu'une manière d'implémenter correctement l'exercice. 
+Une solution est disponible dans les fichiers [boardManager.solution.test.js](./tests/boardManager.solution.test.js) et [tictacToe.solution.test.js](./tests/ticTacToe.solution.test.js). Notez qu'il peut y avoir plus qu'une manière d'implémenter correctement l'exercice. 
 
 Notez que, par défaut, l'exécution de ses tests est ignorée à cause de la méthode `skip` sur la fonction `describe`. Vous pouvez retirer `skip` pour exécuter les tests, mais ceci peut fausser le taux de couverture de vos propres tests.

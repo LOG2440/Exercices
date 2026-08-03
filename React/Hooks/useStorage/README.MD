@@ -1,8 +1,8 @@
-# Hooks Reacts personnalisés
+# Hooks React personnalisés
 
-Les hooks par défaut de React telles que `useState` et `useEffect` peuvent être combinées pour créer des hooks personnalisés à nos besoins. Ils existent plusieurs librairies comme [useHooks](https://github.com/uidotdev/usehooks) qui contiennent un grand nombre de hooks développés par la communauté.
+Les hooks par défaut de React telles que `useState` et `useEffect` peuvent être combinées pour créer des hooks personnalisés à nos besoins. Il existe plusieurs librairies comme [useHooks](https://github.com/uidotdev/usehooks) qui contiennent un grand nombre de hooks développés par la communauté.
 
-Vous devez implémenter le hook `useState` qui fait usage du [Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Storage) du navigateur en utilisant `useEffect` et `useState`.
+Vous devez implémenter le hook `useStorage` qui fait usage du [Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Storage) du navigateur en utilisant `useEffect` et `useState`.
 
 ## Installation des dépendances et lancement du projet
 
@@ -14,7 +14,7 @@ Vous pouvez lancer la transpilation et le lancement d'un serveur statique avec l
 
 Dans cet exercice, vous devez implémenter le hook `useStorage` qui se comporte de manière similaire à `useState`, mais permet de persister l'état dans le _LocalStorage_ ou _SessionStorage_, en fonction de la configuration initiale du hook.
 
-La composante principale présente un champ `<textarea>` editable et un compteur dont la valeur initiale est de `1` et peut être incrémenté à travers un bouton. Lorsqu'un de ces 2 éléments est modifié, la valeur est sauvegardée dans le _LocalStorage_ pour le texte ou _SessionStorage_ pour le compteur en fonction de la configuration dans `App.jsx`. Si vous modifiez les 2 éléments, fermez votre navigateur et rouvrez la page à nouveau, le texte devrait persister, mais pas l'état du compteur.
+La composante principale présente un champ `<textarea>` éditable et un compteur dont la valeur initiale est de `1` et peut être incrémenté à travers un bouton. Lorsqu'un de ces 2 éléments est modifié, la valeur est sauvegardée dans le _LocalStorage_ pour le texte ou _SessionStorage_ pour le compteur en fonction de la configuration dans `App.jsx`. Si vous modifiez les 2 éléments, fermez votre navigateur et rouvrez la page à nouveau, le texte devrait persister, mais pas l'état du compteur.
 
 Le bouton `Vider` permet de vider les 2 espaces de stockage. Vous pouvez voir le comportement final voulu en modifiant le module importé dans le fichier [App.jsx](./src/App.jsx) et charger la solution.
 

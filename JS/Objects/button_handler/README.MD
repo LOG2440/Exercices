@@ -19,6 +19,6 @@ Rappel : le 2e paramètre de la fonction `addEventListener` doit être une fonct
 
 # Solution
 
-Deux solutions possibles sont disponibles dans le fichier [solution.js](./button_handler/solution.js). Vous pouvez référer ce fichier en modifiant l'attribut `src` de la balise `<script>` à la ligne 7 d'`index.html`. 
+Deux solutions possibles sont disponibles dans le fichier [solution.js](./button_handler/solution.js). Vous pouvez référencer ce fichier en modifiant l'attribut `src` de la balise `<script>` à la ligne 7 d'`index.html`. 
 
-La solution de la partie 2 est disponible dans le ficiher [solution2.js](./button_handler/solution2.js). Vous pouvez référer ce fichier en modifiant l'attribut `src` de la balise `<script>` à la ligne 7 d'`index.html`. 
+La solution de la partie 2 est disponible dans le fichier [solution2.js](./button_handler/solution2.js). Vous pouvez référencer ce fichier en modifiant l'attribut `src` de la balise `<script>` à la ligne 7 d'`index.html`. 

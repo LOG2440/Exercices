@@ -12,7 +12,7 @@ Les deux exercices ont besoin d'une instance PostgreSQL et d'une base de donnée
 
 ## Table des matières
 
-Voici les liens vers les différents exercices et leurs énoncés. Vous êtes conseillés de comencer par l'exercice d'introduction :
+Voici les liens vers les différents exercices et leurs énoncés. Vous êtes conseillés de commencer par l'exercice d'introduction :
 
 - [`Class`](./Class/README.MD) : exercice d'évolution d'un système existant pour migrer d'un fichier local vers une base de données relationnelle avec deux tables liées.
 - [`Movies`](./Movies/README.MD) : exercice sur les requêtes SQL complexes avec filtres, jointures, sélection des colonnes, tri et combinaison de plusieurs critères.

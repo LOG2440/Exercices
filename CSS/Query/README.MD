@@ -23,8 +23,6 @@ Vous pouvez simuler le changement de la taille de l'écran en ouvrant les outils
 
 Chrome vient avec certains appareils préconfigurés comme l'iPhone SE (`375px` * `667px` en mode portrait) qui permet de tester vos requêtes média en fonction de son orientation.
 
-
-
 ## Rendu visuel final
 
 ### Rendu visuel sous 800px
@@ -48,8 +46,6 @@ Vous devez implémenter les changements suivants pour la mise en page du documen
 - L'entête et la table des matières ne doivent pas être visibles
 - Le contenu principal doit occuper tout l'espace disponible (les marges d'impression par défaut peuvent rester)
 - Il doit avoir un saut de page avant les sections `Types de média` et `Caractéristiques média`. _Note_: il y a plus qu'une propriété CSS possible qui permet ce comportement 
-
-
 
 # Solutions
 

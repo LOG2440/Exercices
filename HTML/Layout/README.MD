@@ -12,7 +12,7 @@ Vous devez faire les modifications suivantes :
 - Dans `Informations générales`, chaque valeur numérique doit être dans une balise dédiée avec un attribut `id` unique
 - Les ingrédients de la recette devraient être représentés avec une liste de points et chaque ingrédient doit être sur une ligne séparée.
 - Les outils devraient être représentés avec une liste numérotée et chaque outil doit être sur une ligne séparée. 
-- Les étapes de la recette deraient être représentés avec une liste de cases à cocher et chaque étape doit être sur une ligne séparée.
+- Les étapes de la recette devraient être représentés avec une liste de cases à cocher et chaque étape doit être sur une ligne séparée.
     - L'utilisateur doit être capable de cocher la case en cliquant sur le texte de l'étape. Astuce : considérez le rôle de l'élément `<label>` fourni.
 
 
@@ -28,4 +28,4 @@ La règle donnée dans `<style>` permet de ~~barrer~~ le texte d'une étape si l
 
 Une solution possible est disponible dans le fichier [solution.html](./solution.html).
 
-Il peut y avoir plusieurs solutions possibles et valides. Notez que les identifiants que vous avez utilisés peuvnet être différents que ceux dans la solution.
+Il peut y avoir plusieurs solutions possibles et valides. Notez que les identifiants que vous avez utilisés peuvent être différents que ceux dans la solution.

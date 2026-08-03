@@ -21,9 +21,9 @@ Consultez la documentation pour comprendre les paramètres à envoyer dans la re
 
 La première partie de l'exercice consiste à communiquer avec l'API de CheapShark afin de récupérer les **20** jeux vidéo en promotion et les afficher dans la page web sous la forme de vignettes. La récupération des jeux se fait à travers le bouton `Load Games`. 
 
-Une structure de base de la vignette d'un jeu vous est fournie dans le fichier [index.html](./index.html). L'image de chaque jeu est également un lien vers la page jeu à travers le lien de redirection de CheapShark. Vous devez construire autant de vignettes que de jeux récupérés par la requête. La documentation de l'API contient
+Une structure de base de la vignette d'un jeu vous est fournie dans le fichier [index.html](./index.html). L'image de chaque jeu est également un lien vers la page jeu à travers le lien de redirection de CheapShark. Vous devez construire autant de vignettes que de jeux récupérés par la requête.
 
-Vous devez compléter la fonction `loadGames()` dans le fichier [index.js](./index.js) pour envoyer la requête à l'API de CheapShark et l'ajouter au bon bouton de la page. Consultez la document de l'API pour savoir comment cibler le bon magasin et le nombre de jeux à récupérer.
+Vous devez compléter la fonction `loadGames()` dans le fichier [index.js](./index.js) pour envoyer la requête à l'API de CheapShark et l'ajouter au bon bouton de la page. Consultez la documentation de l'API pour savoir comment cibler le bon magasin et le nombre de jeux à récupérer.
 
 ### Gestion de la pagination
 
@@ -41,4 +41,4 @@ Vous devez modifier la fonction `loadGames()` pour prendre en compte le magasin 
 
 ## Solution
 
-Une solution possible est disponible dans le fichier [solution.js](./solution.js). Vous êtes fortement encouragés de compléter l'exercice par vous-mêmes avant de regarder la solution, mais vous pouvez à tout temps consulter la solution finale pour mieux comprendre le fonctionnement des différentes notions.
+Une solution possible est disponible dans le fichier [solution.js](./solution.js). Vous êtes fortement encouragés d'essayer de compléter l'exercice par vous-mêmes avant de regarder la solution, mais vous pouvez à tout temps consulter la solution finale pour mieux comprendre le fonctionnement des différentes notions.

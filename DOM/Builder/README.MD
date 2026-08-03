@@ -2,7 +2,7 @@
 
 Cet exercice couvre les notions de construction dynamique d'élément du DOM. 
 
-Plusieurs libraires telles que [React](https://react.dev/reference/react/createElement) ont des fonctions utilitaires qui permettent de créer des éléments HTML dynamiquement sans avoir à écrire du code dupliquée à chaque fois pour générer des éléments avec des propriétés (id, classes, etc.).
+Plusieurs libraires telles que [React](https://react.dev/reference/react/createElement) ont des fonctions utilitaires qui permettent de créer des éléments HTML dynamiquement sans avoir à écrire du code dupliqué à chaque fois pour générer des éléments avec des propriétés (id, classes, etc.).
 
 ## Mise en situation
 
@@ -41,12 +41,12 @@ props =
 
 - L'attribut `id` représente l'id de l'élément. 
 - L'attribut `classes` représente une liste de classes à ajouter à l'élément.
-- L attribut `rest` est un simple objet clé-valeur dont les valeur sont toujours des `string`. 
+- L'attribut `rest` est un simple objet clé-valeur dont les valeurs sont toujours des `string`. 
 
 Tous les 3 attributs sont optionnels et peuvent ne pas exister sur l'objet. `props` peut également être `null` si on veut créer un élément HTML simple.
 
 
-Le paramètre `children` est un tableau d'objets `HTMLElement` ou `string` qui reprente les éléments enfants de l'objet à construire. Tous les éléments doivent être rajoutés à l'élément final. Il devrait être possible de construire les éléments de type `HTMLElement` avec la fonction `createElement`. 
+Le paramètre `children` est un tableau d'objets `HTMLElement` ou `string` qui représente les éléments enfants de l'objet à construire. Tous les éléments doivent être rajoutés à l'élément final. Il devrait être possible de construire les éléments de type `HTMLElement` avec la fonction `createElement`. 
 
 ### Exemple d'utilisation
 

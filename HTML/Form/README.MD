@@ -17,8 +17,8 @@ Astuce : l'élément [`<option>`](https://developer.mozilla.org/en-US/docs/Web/H
 
 ## Commentaire
 
-L'utilisateur doit laisser un commentaire avec un titre. Le titre contient un texte de remplacement (_placeholder_) tel que présenté dans la capture d'écran. Le message doit contenir au moins 10 caractères pour que le formulaire soit considéré comme valide. L'utilisateur doit pouvoir modifier la taille du champ de saisi pour le message. \
-Astuce : il y a plusieurs manières d'implémenter un champ de saisi en HTML. Les règles CSS fournies contiennent un indice. 
+L'utilisateur doit laisser un commentaire avec un titre. Le titre contient un texte de remplacement (_placeholder_) tel que présenté dans la capture d'écran. Le message doit contenir au moins 10 caractères pour que le formulaire soit considéré comme valide. L'utilisateur doit pouvoir modifier la taille du champ de saisie pour le message. \
+Astuce : il y a plusieurs manières d'implémenter un champ de saisie en HTML. Les règles CSS fournies contiennent un indice. 
 
 ## Validation et Envoi
 

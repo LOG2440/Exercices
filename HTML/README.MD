@@ -10,7 +10,7 @@ La documentation de [HTML sur MDN](https://developer.mozilla.org/en-US/docs/Web/
 
 ## Table des matières
 
-Voici les liens vers les différents exercices et leurs énoncés. Vous êtes conseillés de comencer par l'exercice d'introduction :
+Voici les liens vers les différents exercices et leurs énoncés. Vous êtes conseillés de commencer par l'exercice d'introduction :
 
 - [`Syntaxe`](./Syntaxe/README.MD) : exercice d'introduction sur la syntaxe du langage HTML
 - [`Mise en page`](./Layout/README.MD) : exercice sur la mise en page d'un document HTML avec des balises de base

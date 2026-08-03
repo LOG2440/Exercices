@@ -6,11 +6,11 @@ Vous aurez à gérer des événements de la souris, du clavier ainsi que des év
 
 # Lecteur de musique
 
-Vous aurez à implémenter le fonctionnement d'un lecteur de musique, à la `Spotify`. Une grande partie de la logique vous est déjà fournie et vous devez la compléter et lier la logique à différents événements pour rendre la page intéractive.
+Vous aurez à implémenter le fonctionnement d'un lecteur de musique, à la `Spotify`. Une grande partie de la logique vous est déjà fournie et vous devez la compléter et lier la logique à différents événements pour rendre la page interactive.
 
 La page [index.html](index.html) présente une liste de chansons avec un ensemble de contrôles pour la musique : 
 - un bouton pour jouer/mettre en pause
-- un bouton pour jouer la chanson précédante
+- un bouton pour jouer la chanson précédente
 - un bouton pour jouer la prochaine chanson
 - une barre de progrès qui permet de se déplacer dans la chanson 
 
@@ -28,7 +28,7 @@ Chaque élément HTML ayant la classe `song-item` contient 2 propriétés `data`
 
 Vous devez assigner l'attribut `src` de la variable `audio` au lien de la 1re chanson au chargement de la page. 
 
-Vous devez compléter la fonction `play()` fournie et afficher le nom de la chanson jouée dans le bon élément HTML. Vous dous devez lier les fonctions `playPrevious()`, `play()` et `playNext()` aux bons contrôles dans l'interface dans la fonction `bindEvents()`. 
+Vous devez compléter la fonction `play()` fournie et afficher le nom de la chanson jouée dans le bon élément HTML. Vous devez lier les fonctions `playPrevious()`, `play()` et `playNext()` aux bons contrôles dans l'interface dans la fonction `bindEvents()`. 
 
 Consultez les descriptions des fonctions pour mieux comprendre leur fonctionnement. Notez que le code fourni gère une "boucle infinie" : dans le cas de la dernière chanson, la prochaine est la 1re de la liste et vice versa.
 
@@ -42,11 +42,11 @@ Vous devez implémenter un passage automatique à la prochaine chanson lorsque l
 
 Vous devez également implémenter une mise à jour de la barre de progrès en fonction de l'avancement de la chanson. Notez que l'élément `<input>` a une valeur minimale de `0` et maximale de `100` : vous devez donc normaliser l'état d'avancement de l'audio sur `100`, peu importe sa durée totale.
 
-Consultez la documentation de l'inteface [`HTMLMediaElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement) qui est implémentée par l'objet `Audio` que vous utilisez. Vous aurez besoin de certaines propriétés et événements de l'objet `audio` pour compléter cet exercice.
+Consultez la documentation de l'interface [`HTMLMediaElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement) qui est implémentée par l'objet `Audio` que vous utilisez. Vous aurez besoin de certaines propriétés et événements de l'objet `audio` pour compléter cet exercice.
 
 Vous devez implémenter ces comportements dans la fonction `bindEvents()`.
 
-## Exerice 3 : Utiliser des raccourcis de clavier
+## Exercice 3 : Utiliser des raccourcis de clavier
 
 Vous devez implémenter une manière alternative de contrôler la musique à travers des raccourcis du clavier. Ces raccourcis devraient être disponibles globalement sur la page et toute autre touche ne devrait pas avoir un effet sur la page.
 
@@ -55,7 +55,7 @@ Vous devez implémenter la gestion des raccourcis dans la fonction `bindShortcut
 Vous devez implémenter les raccourcis suivants :
  - Espace (' ') : jouer/mettre pause la chanson
  - N            : prochaine chanson
- - P            : chanson précédante
+ - P            : chanson précédente
  - J            : reculer de 5 secondes dans la chanson
  - L            : avancer de 5 secondes dans la chanson
 

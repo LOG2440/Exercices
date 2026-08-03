@@ -1,8 +1,8 @@
 # Exponential backoff et les promesses
 
-_Exponential Backoff_ est un algoritme de gestion des requêtes où une requête échouée est repétée après un délai variable pour essayer d'avoir une réponse réussie. Comme son nom l'indique, le délai est incrémenté de manière exponentielle, souvent par des puissances de 2 :  `2^nbTentatives`.
+_Exponential Backoff_ est un algorithme de gestion des requêtes où une requête échouée est répétée après un délai variable pour essayer d'avoir une réponse réussie. Comme son nom l'indique, le délai est incrémenté de manière exponentielle, souvent par des puissances de 2 :  `2^nbTentatives`.
 
-Cette manière de faire est utilisée dans la réseautique et le web dans le cas d'une communication avec un service externe qui peut ne pas répondre du à une charge de travail trop grande, un échec d'opération ou toute autre situation potentielle.
+Cette manière de faire est utilisée dans la réseautique et le web dans le cas d'une communication avec un service externe qui peut ne pas répondre dû à une charge de travail trop grande, un échec d'opération ou toute autre situation potentielle.
 
 L'exemple présenté dans [index.html](./index.html) et [retry.js](./retry.js) est une simulation d'un appel à un serveur qui a un certain pourcentage de chance (configurable) de répondre à la requête.
 
@@ -35,6 +35,6 @@ Voici 2 contraintes à respecter pour l'implémentation de votre exercice :
 
 ## Seuil de réussite
 
-Il est possible de définir le seuil de réussie de `fetchData` dans la page web. Ce seuil est par défaut à 25%, mais vous pouvez le changer de 1 à 100%.
+Il est possible de définir le seuil de réussite de `fetchData` dans la page web. Ce seuil est par défaut à 25%, mais vous pouvez le changer de 1 à 100%.
 
 Une valeur de 1% vous donnera des fortes chances d'atteindre la limite de nombre de requêtes. Notez cependant que `Math.random()` n'est pas une fonction parfaitement uniforme et vous pouvez avoir un succès dès la première requête, même avec 1% de seuil.

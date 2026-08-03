@@ -1,6 +1,6 @@
 # Développement piloté par les tests
 
-Le développement piloté par les tests  (_Test Driven Development(TDD)_) est une approche de développement où les tests sont écrits en premier et le code qui implémente la logique testée est fait par la suite.
+Le développement piloté par les tests (_Test Driven Development (TDD)_) est une approche de développement où les tests sont écrits en premier et le code qui implémente la logique testée est fait par la suite.
 
 ## Mise en situation
 
@@ -27,7 +27,7 @@ Ces notes devraient donner les moyennes suivantes :
 
 ### Tests unitaires
 
-Le fichier [scoreCalculator.test.js](./tests/scoreCalculator.test.js) contient les tests unitaires pour les différentes fonctions de la classe `ScoreCalculator` du fichier [scoreCalcultor.js](./src/scoreCalculator.js).
+Le fichier [scoreCalculator.test.js](./tests/scoreCalculator.test.js) contient les tests unitaires pour les différentes fonctions de la classe `ScoreCalculator` du fichier [scoreCalculator.js](./src/scoreCalculator.js).
 
 Vous devez compléter la classe `ScoreCalculator` et ses fonctions en fonction des tests fournis.
 
@@ -45,12 +45,12 @@ Vous pouvez vérifier votre code avec les commandes `npm run test` et `npm run c
 
 # Solution
 
-Une solution est disponible dans le fichier [solution.js](./src/solution.js). Notez qu'il peut avoir plus qu'une manière d'implémenter correctement l'exercice et réussir tous les tests fournis. La solution fournie se base sur une méthode d'itération spécifique, mais vous pouvez implémenter une solution en utilisation d'autres fonctions de l'objet `Array`.
+Une solution est disponible dans le fichier [solution.js](./src/solution.js). Notez qu'il peut y avoir plus qu'une manière d'implémenter correctement l'exercice et réussir tous les tests fournis. La solution fournie se base sur une méthode d'itération spécifique, mais vous pouvez implémenter une solution en utilisation d'autres fonctions de l'objet `Array`.
 
 
 ## Exercice supplémentaire
 
-*Note : cet exercice ne demande pas d'implémentation, mais plutôt un travail de reflexion. La réponse est disponible dans le fichier [solution.js](./src/solution.js).*
+*Note : cet exercice ne demande pas d'implémentation, mais plutôt un travail de réflexion. La réponse est disponible dans le fichier [solution.js](./src/solution.js).*
 
 Voici un extrait du code HTML du formulaire qui permet de laisser une note sur la page web du produit :
 
@@ -58,4 +58,4 @@ Voici un extrait du code HTML du formulaire qui permet de laisser une note sur l
 <input id="stars" type="number" min=0 max=5>
 ```
 
-Votre collègue pense qu'il peut avoir un problème potentiel avec le système de calcul des moyennes sur le serveur. Quel est ce problème et comment est-ce qu'il pourrait être détecté ?
+Votre collègue pense qu'il peut y avoir un problème potentiel avec le système de calcul des moyennes sur le serveur. Quel est ce problème et comment est-ce qu'il pourrait être détecté ?
