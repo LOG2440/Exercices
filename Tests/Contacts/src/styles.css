@@ -1,0 +1,62 @@
+body {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+.nav-link.active {
+    color: #1a73e8;
+    border-bottom: 2px solid #1a73e8;
+}
+
+#search-input,
+#add-form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.delete-btn {
+    cursor: pointer;
+}
+
+#add-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+#error-message {
+    color: #c0392b;
+}

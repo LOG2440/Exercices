@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajouter un contact</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./add.js" type="module"></script>
+</head>
+
+<body>
+  <nav>
+    <a id="nav-home" class="nav-link" href="./index.html">Accueil</a>
+    <a id="nav-add" class="nav-link active" href="./add.html">Ajouter</a>
+  </nav>
+
+  <main>
+    <h1>Ajouter un contact</h1>
+    <form id="add-form">
+      <label for="name-input">Nom</label>
+      <input id="name-input" type="text" placeholder="Nom complet">
+
+      <label for="email-input">Courriel</label>
+      <input id="email-input" type="text" placeholder="courriel@example.com">
+
+      <p id="error-message" hidden></p>
+
+      <button type="submit">Ajouter</button>
+    </form>
+  </main>
+</body>
+
+</html>
