@@ -1,0 +1,17 @@
+{
+  "name": "contacts",
+  "version": "1.0.0",
+  "description": "Exercices sur les tests avec Cypress",
+  "type": "module",
+  "scripts": {
+    "start": "http-server -a localhost -p 3000 -o src",
+    "cypress": "cypress open",
+    "cypress:run": "cypress run",
+    "test:headless": "cypress run --browser chrome"
+  },
+  "license": "CC-BY-3.0",
+  "devDependencies": {
+    "cypress": "15.19.0",
+    "http-server": "^14.1.1"
+  }
+}
